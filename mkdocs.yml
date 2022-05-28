@@ -1,0 +1,94 @@
+#https://squidfunk.github.io/mkdocs-material/reference/annotations/
+
+site_name: JB Swap
+
+theme: 
+  name: material
+  features:
+    - navigation.tracking
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    - header.autohide
+    #- navigation.expand
+    - toc.integrate
+    - content.tabs.link
+    - navigation.top    
+  palette:
+    - scheme: default
+      primary: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: purple 
+      toggle:
+        icon:  material/weather-sunny
+        name: Switch to light mode     
+  icon:
+    admonition:
+      note: octicons/tag-16
+
+nav: 
+  - 소개: index.md
+  - 프로토콜 개요: index.md
+  - 특 장점: index.md
+  - 주의 사항: index.md
+  - Tokenomics:
+    - 홈0: index.md 
+  - 'User Guide':
+    - 홈1: index2.md 
+    - 홈2: index.md 
+    - 홈3: index.md 
+  - Contracts: 
+    - OBJECTS: contracts/objects.md 
+    - PERMISSION: contracts/permission.md 
+    - TEAMWALLET: contracts/teamWallet.md 
+    - GBUILDER:  contracts/gBuilder.md 
+    - MINE: contracts/mine.md 
+    - GTOKEN: contracts/gToken.md 
+    - DAOBUILDER: contracts/daoBuilder.md 
+    - DAO: contracts/dao.md 
+    - VOTING: contracts/voting.md 
+    - MANAGER BUILDER: contracts/managerBuilder.md 
+    - SWAP POOL MANAGER: contracts/swapPoolManager.md 
+    - TOKEN MANAGER: contracts/tokenManager.md 
+    - LPT FACTORY: contracts/lptFactory.md 
+    - LPT STAKING HOLDER FACTORY: contracts/lptStakingHolderFactory.md 
+    - SWAP POOL FACTORY: contracts/swapPoolFactory.md 
+    - LPT(ERC721): contracts/LPT.md
+    - LPT STAKING HOLDER: contracts/lptStakingHolder.md
+    - SWAP POOL: contracts/swapPool.md    
+    - RARITY: contracts/rarity.md 
+    - SWAP HELPER: contracts/swapHelper.md
+  - '보안 감사': index.md 
+  - glossary: index.md 
+
+extra:
+  homepage: https://example.com
+  social:
+    - icon: fontawesome/brands/twitter 
+      link: https://twitter.com/squidfunk
+  
+
+copyright: Copyright &copy; 2022 - 2023 CoongKa
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences  
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format       
+
+plugins:
+  - search
+  - i18n:
+      default_language: en
+      languages:
+        en: english
+        fr: français
