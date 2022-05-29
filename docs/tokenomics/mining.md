@@ -16,10 +16,6 @@ NFT화 된 LPT를 게임이의 곡갱이 처럼 강화하여 마이닝에 참여
 
 ``` mermaid
 graph LR
-  G1[곡갱이] --> BC1[NFT화된 LPT];
-  G2[채광] --> BC2[mining];
-  G3[광석] --> BC3[Staking holder];
-
   A[mine] --> B{ isMinealbe };
   B -->|Yes| C[staking holder - weight 4];
   B -->|Yes| D[staking holder - weight 20];

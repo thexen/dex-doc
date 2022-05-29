@@ -34,6 +34,7 @@ nav:
   - 특 장점: index.md
   - 주의 사항: index.md
   - Tokenomics:
+    - tokenomics/tokenomics.md 
     - 홈0: tokenomics/allocation.md 
     - MINING: tokenomics/mining.md 
   - 'User Guide':

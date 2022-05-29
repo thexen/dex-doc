@@ -1,4 +1,4 @@
-# **ALLOCATION**
+# **ALLOCATION**   
 - - -
 
 1. 총 발행량: 150,000,000   
@@ -15,3 +15,4 @@
 5. 채굴 커미션: 10%
        
 
+## **GOVERNANCE TOKEN MINING**
