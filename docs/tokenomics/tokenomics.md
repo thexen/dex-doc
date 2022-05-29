@@ -1,20 +1,20 @@
 # **TOKENOMICS**
 - - -
 
-J100Swap은 타 DEX와 차별화 된 정책들이 몇 가지 있습니다  
-유동성 제공자에게 보다 많은 수익과 인센티브, 또 다른 가치 창출 기회를 제공하고 J100Swap의 생태계 유지를 위한   
+j100Swap은 타 DEX와 차별화 된 정책들이 몇 가지 있습니다  
+유동성 제공자에게 보다 많은 수익과 인센티브, 또 다른 가치 창출 기회를 제공하고 j100Swap의 생태계 유지를 위한   
 유동성 확보 및 확보된 유동성 유지 방안에 대한 많은 고민을 하였습니다   
 
-??? warning annotate "J100Swap의 차별화 된 정책"
+??? warning annotate "j100Swap의 차별화 된 정책"
       - NFT화 된 LPT   
       - LPT 강화    
       - LPT 강화 성공 인센티브   
       - Voting
 
-      [:fontawesome-solid-link: TODO - LPT 및 강화 정책에 관한 자세한 내용 ](/contracts/objects ){ .md-button } 
-      [:fontawesome-solid-link: TODO - Voting 투표권에 관한 자세한 내용 ](/contracts/objects ){ .md-button } 
+      [:fontawesome-solid-link: TODO - LPT 및 강화 정책에 관한 자세한 내용 ](/features/lpt ){ .md-button } 
+      [:fontawesome-solid-link: TODO - Voting 투표권에 관한 자세한 내용 ](/features/voting ){ .md-button } 
 
-J100Swap 생태계에 참여하여 획득한 LPT, ballot는 유동성 제공과 staking 만으로 보상을 받았던 기존의 DEX들과 다르게   
+j100Swap 생태계에 참여하여 획득한 LPT, ballot는 유동성 제공과 staking 만으로 보상을 받았던 기존의 DEX들과 다르게   
 자산화 할 수 있도록 되어 있습니다(다만 ballot은 투표기간 동안만 자유롭게 개인간 거래가 됩니다)
 
 예를 들어 NFT화 된 LPT는 기존의 NFT와 다르게 두 token이 binding 되어 있어 최소한 binding 된 두 token의 가치와 동일한   

@@ -1,6 +1,6 @@
 #https://squidfunk.github.io/mkdocs-material/reference/annotations/
 
-site_name: JB Swap
+site_name: j100Swap
 
 theme: 
   name: material
@@ -33,15 +33,18 @@ nav:
   - 프로토콜 개요: index.md
   - 특 장점: index.md
   - 주의 사항: index.md
-  - Tokenomics:
-    - tokenomics/tokenomics.md 
-    - 홈0: tokenomics/allocation.md 
-    - MINING: tokenomics/mining.md 
+  - TOKENOMICS:
+    - TOKENOMICS: tokenomics/tokenomics.md 
+    - ALLOCATION: tokenomics/allocation.md 
+  - FEATURES:
+    - MINING: features/mining.md 
+    - LPT: features/lpt.md 
+    - VOTING: features/voting.md 
   - 'User Guide':
     - 홈1: index2.md 
     - 홈2: index.md 
     - 홈3: index.md 
-  - Contracts: 
+  - CONTRACTS: 
     - OBJECTS: contracts/objects.md 
     - PERMISSION: contracts/permission.md 
     - TEAMWALLET: contracts/teamWallet.md 
@@ -63,7 +66,7 @@ nav:
     - RARITY: contracts/rarity.md 
     - SWAP HELPER: contracts/swapHelper.md
   - '보안 감사': index.md 
-  - glossary: index.md 
+  - GLOSSARY: glossary/glossary.md 
 
 extra:
   homepage: https://example.com
