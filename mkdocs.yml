@@ -34,7 +34,8 @@ nav:
   - 특 장점: index.md
   - 주의 사항: index.md
   - Tokenomics:
-    - 홈0: index.md 
+    - 홈0: tokenomics/allocation.md 
+    - MINING: tokenomics/mining.md 
   - 'User Guide':
     - 홈1: index2.md 
     - 홈2: index.md 
@@ -73,6 +74,11 @@ extra:
 copyright: Copyright &copy; 2022 - 2023 CoongKa
 
 markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg  
+  - md_in_html  
   - tables
   - admonition
   - pymdownx.details
@@ -84,6 +90,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format       
+
 
 plugins:
   - search
