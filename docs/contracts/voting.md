@@ -90,6 +90,18 @@
     ```  
 
     - - -
+    * **invokeProposer**   
+    안건 제안자를 등록한다
+    ``` java
+        function invokeProposer( address proposer ) public onlyCreator
+    ```  
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | proposer   | 안건을 상정한 address |
+
+    - - -
     * **preInvoke**   
     상정된 본 안건이 가결되어 본 안건 이전에 처리되어야 할 내용을 처리한다
     ``` java
@@ -102,6 +114,12 @@
     ``` java
         function invoke() public onlyConsent noReentrancy 
     ```  
+    - - -
+    * **withdrawal**   
+    투표 독려금을 회수 한다
+    ``` java
+         function withdrawal() public onlyProposer
+    ```      
     
 === "Events"
     1. Sed sagittis eleifend rutrum

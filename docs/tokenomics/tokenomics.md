@@ -61,4 +61,6 @@ staking을 하지 않고 NFT 마켓에 판매 할 경우 또 다른 가치 창�
 | 유동성 풀에서 발생한 수수료 중 governor 몫의 Governance token | 
 | LPT 강화 성공 인센티브 중 governor 몫(20%)과 개발팀 몫(10%)의 Governance token |
 
+그리고 안건 상정 비용을 Governance token으로 지불하게 되어 있어 안건 상정 비용 또한 소각의   
+대상이 됩니다
 
