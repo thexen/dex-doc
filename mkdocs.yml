@@ -40,6 +40,7 @@ nav:
     - MINING: features/mining.md 
     - LPT: features/lpt.md 
     - VOTING: features/voting.md 
+    - TOKENTIER: features/tokenGrade.md 
   - 'User Guide':
     - 홈1: index2.md 
     - 홈2: index.md 

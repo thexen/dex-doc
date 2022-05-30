@@ -378,8 +378,8 @@
 
     - - -
     * **burn**   
-    swap pool 수수료의 일부 Governance 몫인 Governance token과   
-    LPT 강화에 성공한 Incentive의 일부 Governance 몫은 
+    swap pool 수수료 중 Governor 몫의 Governance token과   
+    LPT 강화에 성공한 Incentive의 일부 Governor 몫은 
     Governance token contract address로 적립된다   
     이렇개 적립된 Governance token을 소각한다   
     DAO의 안건 상정과 투표로 결정 된다   
@@ -390,7 +390,7 @@
     ```  
         Parameters     
            
-        | *Param*        | Description                          |
+        | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | amount   | 소각할 Governance token 수량 |
 
@@ -398,22 +398,21 @@
             amount는 Governance token address의 balance를 초과 할 수 없다   
 
     - - -
-    * **transferTo**   
-    swap pool 수수료의 일부 Governance 몫인 Governance token과   
-    LPT 강화에 성공한 Incentive의 일부 Governance 몫은 
+    * **recycle**   
+    swap pool 수수료 중 Governor 몫의 Governance token과   
+    LPT 강화에 성공한 Incentive의 일부 Governor 몫은 
     Governance token contract address로 적립된다
-    이렇게 적립된 Governance token을 전송 한다   
-    DAO의 안건 상정과 투표로 결정 된다   
+    이렇게 적립된 Governance token을 재활용 가능 하도록      
+    DAO의 안건 상정과 투표로 결정하여 Mine으로 전송 한다
     ``` java
-        function transferTo( address to, uint256 amount ) 
+        function recycle( uint256 amount ) 
                     public override noReentrancy 
                     checkPermission( uint16( ENUMPERMISSIONS.DAO ) )
     ```  
         Parameters     
            
-        | *Param*        | Description                          |
+        | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
-        | to   | 수신자 |
         | amount   | 송금 할 수량 |   
 
     

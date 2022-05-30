@@ -51,12 +51,14 @@ Governance token 마이닝이 시작 됩니다, 그런데 모든 StakingHolder�
 그리고 binding 된 두 token 등급을 곱하면 유동성 풀의 weight(가중치)가 되는데 이 가중치를 기준으로   
 다른 LPTStakingHolder와 경쟁하여 Governance token을 분배 받게되며 분배 받은 Governance token은 다시  
 StakingHolder에 staking한 staker들과 경쟁하여 보상을 받게 됩니다       
-[:fontawesome-solid-link: TODO - Token 등급 및 관리 정책에 관한 자세한 내용 ](/contracts/objects ){ .md-button } 
+[:fontawesome-solid-link: ERC20 Token Tier ](/features/tokenGrade){ .md-button }  
 
 
 ## **SWAP POOL WEIGHT**
 
-유동성 풀의 가중치 계산과 분배 경쟁(마이닝)에 참여 여부 결정은 아래 코드와 같습니다
+유동성 풀의 가중치 계산과 분배 경쟁(마이닝)에 참여 여부 결정은 아래 코드와 같습니다     
+!!! info "분배 경쟁에 참여가 가능한 Staking Holder 조건"
+    분배 경쟁에 참여 가능한 StakingHolder는 ERC20 Token 등급이 B(2) 이상 으로만 구성되어야 합니다   
 ```C++
     weight = iTokenManager.inqueryTokenGrade(firstToken)  * iTokenManager.inqueryTokenGrade(secondToken);
     ...
@@ -69,6 +71,7 @@ StakingHolder에 staking한 staker들과 경쟁하여 보상을 받게 됩니다
 ```
 
 StakingHolder가 초당 분배 받을 Governance token 량 계산 공식
+
 ```C++
     (초당 채굴 량) * (유동성 풀 가중치) / (분배 경쟁에 참여한 swap pool들 가중치 합계)
 ```
