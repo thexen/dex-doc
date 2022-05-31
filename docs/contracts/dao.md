@@ -219,10 +219,10 @@
         | stakingUnit | 최소 staking 수량 및 묶음 단위( 1 ether ~ 10,000 ether ) |   
         
     - - -
-    * **invokeGovernanceToken**   
-    Cloud funding으로 조성된 Governance token을 소각한다
+    * **invokeDealFundingAsset**   
+    Cloud funding으로 조성된 Governance token을 처리한다
     ``` java
-       function invokeGovernanceToken( uint8 cmd, uint256 amount ) 
+       function invokeDealFundingAsset( uint8 cmd, uint256 amount ) 
     ```   
         Parameters     
            
