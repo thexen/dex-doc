@@ -1,59 +1,51 @@
 # **TOKEN TIER**
 - - -
+j100Swap 생태계는 거래량이 많은 건전한 ERC20 token의 유동성 공급자에게 더 많은 수수료와   
+인센티브를 배당하고자 ERC20 token 등급제를 도입하고 있습니다  
+이런 유동성 공급자에게 Governance token이 분배됨으로써 j100Swap의 성장에 기여 할거라고   
+확신하기 때문입니다  
 
-# **Address**
-* ADDRESS
 - - -
 
-# **Events & Functions**
+## **등급과 가중치**
+ERC20 token 등급은 유동성 풀을 생성하면 C(1)에서 시작하여 DAO의 투표를 거쳐 A(3)까지  
+등급 조정이 가능합니다    
+개발팀에서 건정성, 대중성, 안전성이 높다고 판단한 자산들은 SS, S등급으로 분류하여 관리   
+되됩니다  
 
-!!! note
-    *onlyCreator*   
-     - contract를 생성 한 account(contract) 만 호출 가능( `Permission contract는 Objects contract가 생성 함` )   
 
-=== "Inquery Functions"
+| *TIER*  | *가중치*  | *등급조정* | *자격유지심사* |
+| -----: | :------: | :---------: | :-----:|
+| SS | 5 | 불가 | X |
+| S  | 4 | 불가 | X | 
+| A  | 3 | 가능 | O |
+| B  | 2 | 가능 | O |
+| C  | 1 | 가능 | - |
 
-    * **inqueryPermission**   
-    contract에 접근가능한 권한을 조회 한다.
-    ``` java
-        function inqueryPermission( address resource
-                                , address accessor ) 
-                            public view returns( uint16 )
-    ```   
-        Parameters     
-           
-        | *Param*      | *Description*                          |
-        | :--------- | :------------------------------------ |
-        | resource | 접근하고자 하는 contract address |
-        | accessor | resource contract의 invoke functions을 호출 할 contract address |   
+!!! info "가중치 계산"  
+    binding 되어 있는 두 pair token 가중치의 곱이며 그 결과가 20을 넘을 순 없다    
+    등급이 SS인 두 token의 가중치는 SS X SS = SSSS(25)가 아닌 SSS(20)입 됩니다   
 
-        Returns     
 
-        | *Return*    | *Description*                          |
-        | :--------- | :------------------------------------ |
-        | uint16 | 접근 권한 코드 (0-조회 실패)|
+- - -
 
-    
-=== "Invoke Functions"
+## **등급 유지**
 
-    * **registPermission**   
-    Invoke functions이 있는 contract로 다른 contract에서 호출이 가능하도록 호출 권한을 부여 한다
-    ``` java
-        function registPermission( address resource
-                                , address accessor
-                                , uint16 permission ) 
-                            public onlyCreator
-    ```  
-        Parameters     
-           
-        | *Param*        | *Description*                          |
-        | :----------- | :------------------------------------ |
-        | resource   | 접근하고자 하는 contract address |
-        | accessor   | resource contract의 invoke functions을 호출 할 contract address |   
-        | permission | 접근 권한 코드 |   
-    
-=== "Events"
-    1. Sed sagittis eleifend rutrum
-    2. Donec vitae suscipit est
-    3. Nulla tempor lobortis orci
+SS, S 등급을 제외한 ERC20 token은 6개월 마다 자격유지 심사를 신청 하여야 하며 DAO의 투표를  
+통해 유지가 되도록 하여야 합니다  
+만약 심사 신청을 하지 않았거나 DAO의 투표로 부결이 되었을 경우 C(1) 등급으로 떨어지며  
+mining을 할 수 없게됩니다  
+이는 곧 건전한 ERC20 token 공급자에게 보다 많은 인센티브가 분배 되는 효과를 가져다 줄 것입니다
 
+
+- - -
+
+# **등급표**
+
+| *TIER*  | *Token,Coing*  |
+| -----: | :------: |
+| SS | BitCoin, Ether, Tether | 
+| S  | j100Swap, Klay,   | 
+| A  | j100Swap Aliance | 
+| B  | - | 
+| C  | - |

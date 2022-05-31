@@ -27,6 +27,9 @@ Governor에게 staking 수량 만큼 투표권이 air drop됩니다, 투표권�
 투표권을 행사 하지않아 남은 인센티브는 안건 상정일 + 투표기간 이후 proposer가 직접   
 회수 할 수 있습니다   
 
+!!! info
+    안건 상정 비용은 Governance staking holder에 적립되어 소각과 재활용을 DAO로   
+    처리 할 수 있습니다
 - - -
 
 ## **투표기간과 안건처리 기간**
@@ -55,3 +58,4 @@ Governor에게 staking 수량 만큼 투표권이 air drop됩니다, 투표권�
 |07| Governance token staking 최소 단위 변경 | 변경 가능 범위 - 1 ~ 10,000 |
 |08| Governance token 소각 | - |
 |09| Governance token 재사용 | - |
+|10| ERC20 token 등급 유지 심사 | - |
