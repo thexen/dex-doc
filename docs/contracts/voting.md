@@ -33,20 +33,6 @@
         | uint256 | 전체 투표권 수  |        
 
     - - -
-    * **inqueryPreCallData**   
-    상정된 본 안건 이전에 처리되어야 하는 data를 조회 한다
-    ``` java
-        function inqueryPreCallData() 
-                    public view returns( string memory, bytes memory )
-    ```   
-        Returns     
-
-        | *Return*    | Description                          |
-        | :--------- | :------------------------------------ |
-        | string | 상정된 안건이 가결 되면 호출 될 function 이름 |
-        | bytes | 호출 할 function의 encoded 된 parameter  |
-
-    - - -
     * **inqueryCallData**   
     상정된 본 안건 data를 조회 한다
     ``` java
@@ -100,13 +86,6 @@
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | proposer   | 안건을 상정한 address |
-
-    - - -
-    * **preInvoke**   
-    상정된 본 안건이 가결되어 본 안건 이전에 처리되어야 할 내용을 처리한다
-    ``` java
-        function preInvoke() public onlyConsent noReentrancy 
-    ```  
 
     - - -
     * **invoke**   

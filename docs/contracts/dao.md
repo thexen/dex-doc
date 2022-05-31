@@ -82,8 +82,7 @@
     * **invokeNewBallot**   
     안건을 상정 한다
     ``` java
-        function invokeNewBallot( bytes memory preCallData
-                            , bytes memory callData
+        function invokeNewBallot( bytes memory callData
                             , uint256 incentive
                             , uint256 deadline ) 
                         public noReentrancy returns( address )
@@ -92,7 +91,6 @@
            
         | *Param*      | Description                          |
         | :--------- | :------------------------------------ |
-        | preCallData | callData 호출전 선행되어야 하는 내용 |
         | callData | 상정한 안건이 가결 되면 호출 될 내용 |   
         | incentive | 투표권 행사를 독려하기 위한 incentive  |
         | deadline | 투표 만료 기간 |   
@@ -108,10 +106,10 @@
             그리고 투표가 끝난 후 가결이 되면 3일 이내 안건을 처리 하여야 한다   
 
     - - -
-    * **invokeTokenUpGrade**   
+    * **invokeModifyTokenAttr**   
     Token 등급을 한단계 상승시킨다
     ``` java
-        function invokeTokenUpGrade( address token ) 
+        function invokeModifyTokenAttr( address token, uint8 mod ) 
                     public onlyVoting noReentrancy
     ```   
         Parameters     
@@ -119,45 +117,24 @@
         | *Param*      | Description                          |
         | :--------- | :------------------------------------ |
         | token | ERC20 token contract address |
+        | mod | 0 : 1등급 상승, 1 : 1등급 하락, 2: 마이닝 자격 갱신, 3 : 마이닝 자격 박탈 |
+
 
         !!! info
+                mod ==  0   
                 S(4)등급 이상의 token은 단계 상승,하락 시킬수 없다  
-                A(3)까지만 상승 실킬 수 있다   
-
-
-    - - -
-    * **invokeTokenDownGrade**   
-    Token 등급을 한단계 하락시킨다
-    ``` java
-        function invokeTokenDownGrade( address token ) public onlyVoting noReentrancy
-    ```   
-        Parameters     
-           
-        | *Param*      | Description                          |
-        | :--------- | :------------------------------------ |
-        | token | ERC20 token contract address |
-
-        !!! info
-                S(4)등급 이상의 token은 단계 상승,하락 시킬수 없다   
+                A(3)까지만 상승 실킬 수 있다
+                mod == 1   
+                S(4)등급 이상의 token은 단계 상승,하락 시킬수 없다    
+                mod == 2   
+                마이닝 자격이 갱신된다   
+                mod == 3   
+                revoke는 마이닝 자격 심사를 하지 않아 마이닝 자격이 중지 된 경우나   
+                마이닝 자격 심사에서 탈락 된 경우만 사용 가능하다   
+                마이닝 자격이 박탈 당하면 C등급으로 변경된다   
 
     - - -
-    * **invokePreLPTSplit**   
-    swap pool의 LPT Token 분할 작업을 위해 선행 작업을 한다     
-    ``` java
-        function invokePreLPTSplit( address swapPool ) public onlyVoting noReentrancy
-    ```   
-        Parameters     
-           
-        | *Param*      | Description                          |
-        | :--------- | :------------------------------------ |
-        | swapPool | LPT 분할을 할 swap pool contract address |        
 
-        !!! info   
-                swap pool Deposit 일시 중지         
-                swap pool 연결된 StakingHolder의 Staking 일시 중지   
-                (일시 중지 후 만 3일 안에 재시작이 되지 않으면 자동으로 재시작 됨)   
-
-    - - -
     * **invokeLPTSplit**   
     swap pool의 LPT Token 분할 작업을 수행한다      
     ``` java
@@ -172,8 +149,13 @@
         | amountPerLPT | LPT 당 분할 할 수량 |   
 
         !!! info   
-                swap pool Deposit 재시작   
-                swap pool 연결된 StakingHolder의 Staking 재시작   
+            작업을 두번 호출 하여야 한다   
+            첫번째 호출: 
+             - swap pool Deposit 일시 중지         
+             - swap pool 연결된 StakingHolder의 Staking 일시 중지  
+            두번째 호출:
+             - 첫번째 호출 24시간이 지난후
+             - LPT 분할  
 
     - - -
     * **invokeFee**   
@@ -237,55 +219,17 @@
         | stakingUnit | 최소 staking 수량 및 묶음 단위( 1 ether ~ 10,000 ether ) |   
         
     - - -
-    * **invokeBurn**   
+    * **invokeGovernanceToken**   
     Cloud funding으로 조성된 Governance token을 소각한다
     ``` java
-       function invokeBurn( uint256 amount ) public onlyVoting noReentrancy
+       function invokeGovernanceToken( uint8 cmd, uint256 amount ) 
     ```   
         Parameters     
            
         | *Param*      | Description                          |
         | :--------- | :------------------------------------ |
-        | amount | 소각 할 수량 |   
-
-    - - -
-    * **invokeRecycle**   
-    Cloud funding으로 조성된 Governance token 재사용한다
-    ``` java
-       function invokeRecycle( uint256 amount ) public onlyVoting noReentrancy
-    ```   
-        Parameters     
-           
-        | *Param*      | Description                          |
-        | :--------- | :------------------------------------ |
-        | amount | 재사용 할 수량 |   
-
-    - - -
-    * **invokeMiningLicenseRenewal**   
-    마이닝 자격을 갱신한다
-    ``` java
-        function invokeMiningLicenseRenewal( address token ) public onlyVoting noReentrancy
-    ```   
-        Parameters     
-           
-        | *Param*      | Description                          |
-        | :--------- | :------------------------------------ |
-        | token | 마이닝 자격을 갱신할 ERC20 token contract address |   
-
-    - - -
-    * **invokeRevokeMiningLicense**   
-    마이닝 자격을 박탈하고 token 등급을 C로 만든다   
-    마이닝 자격 박탈은 마이닝 자격 심사에 탈락 하거나 자격 심사를 하지 않아  
-    자격이 정지 된 token에만 사용 가능하다  
-    ``` java
-        function invokeRevokeMiningLicense( address token ) public onlyVoting noReentrancy
-    ```   
-      Parameters
-      
-      | *Param*      | Description                          |   
-      | :--------- | :------------------------------------ |    
-      | token | 마이닝 자격을 박탈할 ERC20 token contract address |    
-
+        | cmd | 0 : brun, 1 : recycle |   
+        | amount | 소각 또는 재활용 수량 |   
 
 === "Events"
     1. Sed sagittis eleifend rutrum
