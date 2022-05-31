@@ -236,6 +236,56 @@
         | :--------- | :------------------------------------ |
         | stakingUnit | 최소 staking 수량 및 묶음 단위( 1 ether ~ 10,000 ether ) |   
         
+    - - -
+    * **invokeBurn**   
+    Cloud funding으로 조성된 Governance token을 소각한다
+    ``` java
+       function invokeBurn( uint256 amount ) public onlyVoting noReentrancy
+    ```   
+        Parameters     
+           
+        | *Param*      | Description                          |
+        | :--------- | :------------------------------------ |
+        | amount | 소각 할 수량 |   
+
+    - - -
+    * **invokeRecycle**   
+    Cloud funding으로 조성된 Governance token 재사용한다
+    ``` java
+       function invokeRecycle( uint256 amount ) public onlyVoting noReentrancy
+    ```   
+        Parameters     
+           
+        | *Param*      | Description                          |
+        | :--------- | :------------------------------------ |
+        | amount | 재사용 할 수량 |   
+
+    - - -
+    * **invokeMiningLicenseRenewal**   
+    마이닝 자격을 갱신한다
+    ``` java
+        function invokeMiningLicenseRenewal( address token ) public onlyVoting noReentrancy
+    ```   
+        Parameters     
+           
+        | *Param*      | Description                          |
+        | :--------- | :------------------------------------ |
+        | token | 마이닝 자격을 갱신할 ERC20 token contract address |   
+
+    - - -
+    * **invokeRevokeMiningLicense**   
+    마이닝 자격을 박탈하고 token 등급을 C로 만든다   
+    마이닝 자격 박탈은 마이닝 자격 심사에 탈락 하거나 자격 심사를 하지 않아  
+    자격이 정지 된 token에만 사용 가능하다  
+    ``` java
+        function invokeRevokeMiningLicense( address token ) public onlyVoting noReentrancy
+    ```   
+      Parameters
+      
+      | *Param*      | Description                          |   
+      | :--------- | :------------------------------------ |    
+      | token | 마이닝 자격을 박탈할 ERC20 token contract address |    
+
 
 === "Events"
     1. Sed sagittis eleifend rutrum
