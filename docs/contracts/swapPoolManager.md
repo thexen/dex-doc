@@ -300,7 +300,6 @@
     swap pool을 등록 한다   
     ``` java
         function regist( address swapPool
-                    , uint8 weight
                     , address lpt
                     , uint256 fee
                     , uint256 accumulation ) 
@@ -311,7 +310,6 @@
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | swapPool   | swap pool contract address |
-        | weight   | swap pool의 가중치 |
         | lpt`   | swap pool의 LPT |
         | fee   | swap pool의 swap 수수료 |        
         | accumulation   | swap pool의 수수료의 일부 중 Governance 배당 비율( default: 500,000,000(50%) ) |        
@@ -349,7 +347,8 @@
     swap pool의 가중치를 설정 한다   
     ``` java
         function invokeSwapPoolWeight( address swapPool
-                                    , uint8 weight ) 
+                                    , address firstToken
+                                    , address secondToken ) 
                                 public checkPermission( uint16( ENUMPERMISSIONS.DAO ) )
     ```  
         Parameters     
@@ -357,7 +356,6 @@
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | swapPool   | swap pool contract address |
-        | weight   | swap pool의 가중치 |
 
     - - -
     * **invokeFee**   

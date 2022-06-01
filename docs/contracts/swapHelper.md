@@ -77,7 +77,7 @@
                         , uint256 fromAmount
                         , address to
                         , uint256 expectedAmount
-                        , uint16 slippage
+                        , uint8 slippage
                         , address[] memory route ) 
                     public payable returns( uint256 )
     ```  
@@ -88,6 +88,8 @@
         | from | ERC20 token contract address |
         | fromAmount | from의 수량 |   
         | to | ERC20 token contract address  |    
+        | expectedAmount | 교환하여 받게 되는 to의 예상 수량 |    
+        | slippage | 슬리피지(단위 %)|   
         | route | from 에서 to 까지 도달 가능한 경로 |    
 
         Returns     
@@ -98,6 +100,9 @@
 
         !!! info
             from이 address(0) 이면 coin(klay)을 to로 교환 하는 것이므로 fromAmount는 의미가 없다   
+        !!! info
+            slippage는 교환된 to 수량이  ( expectedAmount - (expectedAmount * slippage / 100) )   
+            보다 커야 거래가 진행된다
 
 === "Events"
     1. Sed sagittis eleifend rutrum
