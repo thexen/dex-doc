@@ -1,18 +1,18 @@
 # **LPT**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 > onlyOwner - 
 !!! note
     *onlyOwner*   
     - TODO
 
-=== "Inquery Functions"
+=== "Inquery Functions(3)"
 
     * **tokenURI**   
     tokenId의 metadata 경로를 조회 한다
@@ -69,7 +69,7 @@
 
 
     
-=== "Invoke Functions"
+=== "Invoke Functions(6)"
 
     * **mint**   
     LPT를 amount 만큼 발행 한다

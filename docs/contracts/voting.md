@@ -1,11 +1,11 @@
 # **VOTING**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyCreator*   
@@ -15,7 +15,7 @@
     - 상정된 안건이 투표를 거처 가결되면 호출 가능   
     - 가결 조건 투표권의 과반수이상 투표 참석, 투표 참석 중 과반수 이상 찬성  
 
-=== "Inquery Functions"
+=== "Inquery Functions(2)"
 
     * **inqueryAggrBallot**   
     투표 진행 상태를 조회 한다
@@ -46,7 +46,7 @@
         | string | 상정된 안건이 가결 되면 호출 될 function 이름 |
         | bytes | 호출 할 function의 encoded 된 parameter  |
     
-=== "Invoke Functions"
+=== "Invoke Functions(7)"
 
     * **invokeDeadline**   
     투표 만료일을 설정한다
@@ -93,6 +93,7 @@
     ``` java
         function invoke() public onlyConsent noReentrancy 
     ```  
+
     - - -
     * **withdrawal**   
     투표 독려금을 회수 한다

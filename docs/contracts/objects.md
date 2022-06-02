@@ -1,11 +1,11 @@
 # **OBJECTS**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyRegister*   
@@ -32,10 +32,10 @@
     ```
 
     - - -
-    * **inqueryTeamWallet**   
-    개발팀의 wallet contract address를 조회 한다
+    * **inqueryTeamVault**   
+    개발팀의 Vault contract address를 조회 한다
     ``` java
-        function inqueryTeamWallet() public view returns( address ) 
+        function inqueryTeamVault() public view returns( address ) 
     ```    
 
     - - -
@@ -158,7 +158,30 @@
         | :--------- | :------------------------------------ |
         | address | Objects에서 조회 된 contract address |   
 
-=== "Invoke Functions"
+        | *Object ID*    | *Number*                          |
+        | :--------- | :------------------------------------ |
+        | WORLDCURRENCY | 0  |   
+        | PERMISSION | 1  |  
+        | TEAMVAULT | 2 |  
+        | GBUILDER | 3 |  
+        | MINE | 4 |   
+        | GTOKEN | 5 |  
+        | DAOBUILDER | 6 |  
+        | DAO | 7 |  
+        | MANAGERBUILDER | 8 |   
+        | SWAPPOOLMANAGER | 9 |  
+        | TOKENMANAGER | 10 |  
+        | LPTFACTORY | 11 |          
+        | LPTSTAKINGHOLDERFACTORY | 12 |   
+        | SWAPPOOLFACTORY | 13 |  
+        | RARITY | 14 |  
+        | SWAPHELPER | 15 |    
+
+
+    
+
+
+=== "Invoke Functions(1)"
 
     * **registPermission**   
     Invoke functions이 있는 contract로 다른 contract에서 호출이 가능하도록 호출 권한을 부여 한다

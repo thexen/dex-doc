@@ -1,11 +1,11 @@
-# **TEAMWALLET**
+# **TEA MVAULT**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyMember*   
@@ -15,7 +15,7 @@
     *onlySelf*   
     - Team wallet contract에서 public으로 호출 만 가능
 
-=== "Inquery Functions"
+=== "Inquery Functions(7)"
 
     * **balanceOf**   
     Team wallet 모든 자산(Dex에 등록 되어 있는)을 조회 한다
@@ -150,7 +150,7 @@
         | bytes | 호출 할 function의 encoded 된 parameter  |
 
 
-=== "Invoke Functions"
+=== "Invoke Functions(7)"
 
     * **approval**   
     Team wallet에서 처리 가능한 안건을 승인 한다

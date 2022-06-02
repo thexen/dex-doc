@@ -1,11 +1,11 @@
 # **DAO**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 > onlyVoting - voting contract만 호출 가능        
 > onlyConsent - 상정된 안건의 투표결과로 호출 가능( 호출 조건 발행된 투표권의 과반수이상 투표 참석, 투표 참석 중 과반수 이상 찬성)
@@ -18,7 +18,7 @@
      - 가결 조건 투표권의 과반수이상 투표 참석, 투표 참석 중 과반수 이상 찬성
 
 
-=== "Inquery Functions"
+=== "Inquery Functions(3)"
 
     * **inqueryAgendaSize**   
     전체 안건 수를 조회 한다
@@ -27,7 +27,7 @@
     ```   
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | 상정된 전체 안건 수 |
   
@@ -39,13 +39,13 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | agendaId | 상정된 안건 id |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | address | ERC20 투표 contract address |
 
@@ -58,13 +58,13 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | agendaId | 상정된 안건 id |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | TVotingStatus | 안건 처리 상태 |
 
@@ -77,7 +77,7 @@
             uint256     invokedTime;        //본안건 처리 시간
         }        
         ```
-=== "Invoke Functions"
+=== "Invoke Functions(8)"
 
     * **invokeNewBallot**   
     안건을 상정 한다
@@ -89,7 +89,7 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | callData | 상정한 안건이 가결 되면 호출 될 내용 |   
         | incentive | 투표권 행사를 독려하기 위한 incentive  |
@@ -97,7 +97,7 @@
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | address | ERC20 투표 contract address |
 
@@ -114,7 +114,7 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | token | ERC20 token contract address |
         | mod | 0 : 1등급 상승, 1 : 1등급 하락, 2: 마이닝 자격 갱신, 3 : 마이닝 자격 박탈 |
@@ -143,7 +143,7 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | swapPool | LPT 분할을 할 swap pool contract address |   
         | amountPerLPT | LPT 당 분할 할 수량 |   
@@ -166,7 +166,7 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | swapPool | LPT 분할을 할 swap pool contract address |   
         | fee | 수수료(10,000(0.001%)~1,000,000(1%), 단위 1/1,000,000,000) | 
@@ -181,7 +181,7 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | swapPool | LPT 분할을 할 swap pool contract address |   
         | accumulation | 배당률(400,0000,000(40%)~600,000,000(60%), 단위 1/1,000,000,000) |     
@@ -197,7 +197,7 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | rarity | rarity 이름 |   
         | percentage | 강화 확률 |             
@@ -214,7 +214,7 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | stakingUnit | 최소 staking 수량 및 묶음 단위( 1 ether ~ 10,000 ether ) |   
         
@@ -226,7 +226,7 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | cmd | 0 : brun, 1 : recycle |   
         | amount | 소각 또는 재활용 수량 |   

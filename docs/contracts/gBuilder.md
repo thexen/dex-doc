@@ -1,11 +1,11 @@
 # **GOVERNANCEBUILDER**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyCreator*   
@@ -13,7 +13,7 @@
 
 === "Inquery Functions"
    
-=== "Invoke Functions"
+=== "Invoke Functions(2)"
 
     * **invokeStartMining**   
     Mining을 시작한다   

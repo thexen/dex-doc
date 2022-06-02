@@ -1,11 +1,11 @@
 # **SWAPPOOLMANAGER**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *checkPermission( uint16( ENUMPERMISSIONS.DAO ) )*   
@@ -15,7 +15,7 @@
     *onlyCreator*   
     - contract를 생성 한 account(contract) 만 호출 가능
 
-=== "Inquery Functions"
+=== "Inquery Functions(14)"
 
     * **inqueryTotalValidWeight**   
     swap pool의 유효한 전체 가중치 합계를 조회 한다   
@@ -51,7 +51,7 @@
         | uint8 | swap pool의 가중치 |
 
     - - -    
-    * **inquerySwapPoolWeight**   
+    * **inqueryIsMinable**   
     swap pool의 mining 가능 여부를 조회 한다
     ``` java
         function inqueryIsMinable( address swapPool ) 
@@ -294,7 +294,7 @@
             swap pool의 binding pair token contract address 는    
             swap pool contract의 inqueryPariToken() function으로 조회 할 수 있다   
 
-=== "Invoke Functions"
+=== "Invoke Functions(7)"
 
     * **regist**   
     swap pool을 등록 한다   
@@ -346,9 +346,7 @@
     * **invokeSwapPoolWeight**   
     swap pool의 가중치를 설정 한다   
     ``` java
-        function invokeSwapPoolWeight( address swapPool
-                                    , address firstToken
-                                    , address secondToken ) 
+        function invokeSwapPoolWeight( address swapPool ) 
                                 public checkPermission( uint16( ENUMPERMISSIONS.DAO ) )
     ```  
         Parameters     

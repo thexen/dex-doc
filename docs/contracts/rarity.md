@@ -1,11 +1,13 @@
 # **RARITY**
 - - -
+rarity의 확률을 관리하고 결정하는 역할을 하는 contract 입니다
 
-# **Address**
+- - -
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyCreator*   
@@ -15,7 +17,7 @@
     *checkPermission( uint16( ENUMPERMISSIONS.RARITY ) )*   
     - 
 
-=== "Inquery Functions"
+=== "Inquery Functions(3)"
 
     * **inqueryProbabilityTable**   
     강화 테이블을 조회 한다
@@ -88,7 +90,7 @@
         | bool | 강화 성공 여부 |   
         | uint | 강화 확률에 사용된 랜덤 값 |   
     
-=== "Invoke Functions"
+=== "Invoke Functions(2)"
 
     * **invokeEditProbability**   
     등급의 확률과 가중치를 변경 한다

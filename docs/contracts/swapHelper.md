@@ -1,15 +1,19 @@
 # **SWAP HELPER**
 - - -
 
-# **Address**
+swap(교환)을 도와 주는 contract 입니다
+
+- - -
+
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 > onlyCreator - contract를 생성 한 account(contract) 만 호출 가능, Permission contract는 Objects contract에서 생성 됨        
 
-=== "Inquery Functions"
+=== "Inquery Functions(2)"
 
     * **inqueryRelativeValue**   
     ERC20 token 'from'의 fromAmount 수량으로 ERC20 token 'to'의 상대적 가치를 조회 한다   
@@ -68,7 +72,7 @@
 
     
     
-=== "Invoke Functions"
+=== "Invoke Functions(1)"
 
     * **registPermission**   
     ERC20 token 'from'의 fromAmount 수량으로 ERC20 token 'to'로 교환 한다  

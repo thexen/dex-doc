@@ -1,18 +1,18 @@
 # **TOKENMANAGER**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyCreator*   
     - contract를 생성 한 account(contract) 만 호출 가능
 
 
-=== "Inquery Functions"
+=== "Inquery Functions(4)"
 
     * **inqueryTokenGrade**   
     token 등급을 조회 한다
@@ -84,7 +84,7 @@
         | :--------- | :------------------------------------ |
         | address | ERC20 token contract address |
 
-=== "Invoke Functions"
+=== "Invoke Functions(4)"
 
     * **registTokenGrade**   
     token 등급을 등록한다   
@@ -105,7 +105,8 @@
     token을 등록 한다   
     token 등급은 C(1)로 설정된다
     ``` java
-        function registTokenGrade( address token ) public override checkPermission( uint16( ENUMPERMISSIONS.FACTORY ) )
+        function registTokenGrade( address token ) 
+                public checkPermission( uint16( ENUMPERMISSIONS.FACTORY ) )
     ```  
         Parameters     
            
@@ -118,7 +119,8 @@
     * **invokeTokenUpGrade**   
     token 등급을 한단계 상승시킨다
     ``` java
-        function invokeTokenUpGrade( address token ) public override checkPermission( uint16( ENUMPERMISSIONS.DAO ) ) 
+        function invokeTokenUpGrade( address token ) 
+                public checkPermission( uint16( ENUMPERMISSIONS.DAO ) ) 
     ```  
         Parameters     
            
@@ -130,7 +132,8 @@
     * **invokeTokenDownGrade**   
     token 등급을 한단계 하락시킨다
     ``` java
-        function invokeTokenDownGrade( address token ) public override checkPermission( uint16( ENUMPERMISSIONS.DAO ) )
+        function invokeTokenDownGrade( address token ) 
+                public checkPermission( uint16( ENUMPERMISSIONS.DAO ) )
     ```  
         Parameters     
            

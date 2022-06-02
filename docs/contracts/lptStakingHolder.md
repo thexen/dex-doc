@@ -1,11 +1,11 @@
 # **LPT STAKING HOLDER**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyCreator*   
@@ -13,7 +13,7 @@
     *checkPermission( uint16( ENUMPERMISSIONS.DAO ) )*
     -
 
-=== "Inquery Functions"
+=== "Inquery Functions(14)"
 
     * **inqueryStakingReward**   
     caller가 수령 가능한 staking holder의 reward(mining)을 조회 한다   
@@ -277,7 +277,7 @@
         | bool | true - lock 된 상태임 철회 불가 |        
 
 
-=== "Invoke Functions"
+=== "Invoke Functions(14)"
 
     * **stkStaking**   
     token id 별로 staking 한다

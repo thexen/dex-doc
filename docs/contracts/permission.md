@@ -1,17 +1,17 @@
 # **PERMISSION**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyCreator*   
      - contract를 생성 한 account(contract) 만 호출 가능( `Permission contract는 Objects contract가 생성 함` )   
 
-=== "Inquery Functions"
+=== "Inquery Functions(1)"
 
     * **inqueryPermission**   
     contract에 접근가능한 권한을 조회 한다.
@@ -34,7 +34,7 @@
         | uint16 | 접근 권한 코드 (0-조회 실패)|
 
     
-=== "Invoke Functions"
+=== "Invoke Functions(1)"
 
     * **registPermission**   
     Invoke functions이 있는 contract로 다른 contract에서 호출이 가능하도록 호출 권한을 부여 한다

@@ -1,11 +1,23 @@
 # **SWAP POOL**
 - - -
+유동성 풀(swap pool)입니다    
 
-# **Address**
-* ADDRESS
+??? info "swap pool에 dependency 한 contract address 조회하기"
+    
+    swap pool에 dependency StakingHolder 조회 - ISwapPoolManager의 inqueryLPTStakingHolder(address swapPool)     
+    swap pool에 dependency LPT 조회 - ISwapPoolManager의 inqueryLPT(address swapPool)   
+
+??? info "swap pool listing 하기"        
+    ISwapPoolManager의 inqueryPoolSize() 와 inquerySwapPool(uint256 idx) 
+- - -
+## **Address**
+ISwapPoolManager의 inquerySwapPool( ... ) function 사용   
+
+address:      
+
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyMember*   
@@ -13,7 +25,7 @@
     *checkPermission( uint16( ENUMPERMISSIONS.DAO ) )*
      -    
 
-=== "Inquery Functions"
+=== "Inquery Functions(12)"
 
     * **inqueryPoolInfo**   
     swap pool의 현재 정보를 조회 한다
@@ -243,7 +255,7 @@
         | bool | turu - 예치 가능 상태 |
 
 
-=== "Invoke Functions"
+=== "Invoke Functions(9)"
 
     * **founding**   
     swap pool 생성 후 binding pair token의 비율, LPT 발행 비율을 설정하여 자산을 예치한다   
@@ -360,6 +372,7 @@
         function invokeEnableDisposit() 
                 public checkPermission( uint16( ENUMPERMISSIONS.DAO ) )
     ```  
+
     - - - 
     * **invokeDisableDisposit**   
     예치 기능을 시작 한다

@@ -1,11 +1,11 @@
 # **DAO BUILDER**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
    
 === "Inquery Functions"
     

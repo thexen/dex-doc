@@ -1,11 +1,11 @@
 # **OBJECTS-KR**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 > onlyRegister - 등록 권한을 부여 받은 contract address만 호출 가능( Objects, Factory 계열의 contract 들만 호출 가능 )    
 

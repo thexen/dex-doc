@@ -1,19 +1,19 @@
 # **LPT STAKING HOLDER FACTORY**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *checkPermission( uint16( ENUMPERMISSIONS.ONLY_SWAPPOOL_FACTORY ) )*   
      - swap pool factory contract 에서만 호출 가능 
 
-=== "Inquery Functions"
+=== "Inquery Functions(0)"
    
-=== "Invoke Functions"
+=== "Invoke Functions(1)"
 
     * **createLPTStakingHolder**   
     LPT staking holder를 생성한다

@@ -49,7 +49,7 @@ nav:
   - CONTRACTS: 
     - OBJECTS: contracts/objects.md 
     - PERMISSION: contracts/permission.md 
-    - TEAMWALLET: contracts/teamWallet.md 
+    - TEAMVAULT: contracts/teamVault.md 
     - GBUILDER:  contracts/gBuilder.md 
     - MINE: contracts/mine.md 
     - GTOKEN: contracts/gToken.md 

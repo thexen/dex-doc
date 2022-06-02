@@ -1,11 +1,11 @@
 # **GOVERNANCETOKEN**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyCreator*   
@@ -13,7 +13,7 @@
     *checkPermission( uint16( ENUMPERMISSIONS.DAO ) )*   
      - DAO만 호출 할 수 있다
 
-=== "Inquery Functions"
+=== "Inquery Functions(17)"
 
     * **inqueryStakingUnit**   
     Governernance token staking 묶음 단위를 조회 한다   
@@ -22,7 +22,7 @@
     ```   
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | staking 묶음 단위|
 
@@ -39,7 +39,7 @@
     ```   
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | tTokenReward | token reward 구조체 |
 
@@ -59,13 +59,13 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | token | 조회 할 ERC20 token contract address  |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | 배당 되지 않은 token의 reward 수량 |
 
@@ -78,7 +78,7 @@
     ```   
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | 적립되어 있는 Governance token 수량 |   
 
@@ -97,7 +97,7 @@
     ```   
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | staking 되어 있는 전체 가중치 |   
 
@@ -110,13 +110,13 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | owner | staker address  |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256[] | lock되어 있는 id 목록 |        
         | uint256[] | unlock되어 있는 id 목록 |        
@@ -132,7 +132,7 @@
     ```   
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | bool | true - staking 가능 상태 |    
 
@@ -144,13 +144,13 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | id | staking id |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | bool | true - id는 staking이 되어 있다 |    
 
@@ -162,13 +162,13 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | id | staking id |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | address | staker address |    
 
@@ -181,13 +181,13 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | owner | staker address |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256[] | staker가 staking하여 발급 받은 id 목록 |   
 
@@ -199,13 +199,13 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | owner | staker address |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | staking id 수 |   
     
@@ -217,7 +217,7 @@
     ```   
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | staker 수 |   
 
@@ -230,13 +230,13 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | owner | staker address |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | staking 되어 있는 전체 가중치 |
 
@@ -249,13 +249,13 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | idx | staker index |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | address | staker address |
 
@@ -268,14 +268,14 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | owner | staker address |
         | id | staking id |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | tConclusion | staking 내용 |
 
@@ -296,18 +296,25 @@
     ```   
         Parameters     
            
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | owner | staker address |
         | id | staking id |
 
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | bool | true - lock 상태 철회 불가 |
 
-=== "Invoke Functions"
+    - - -
+    * **inqueryGovernorTokendBalance**   
+    Governance token으로 조성된 펀딩 수량을 조회 한다
+    ``` java
+        function inqueryGovernorTokendBalance() public noReentrancy
+    ```          
+
+=== "Invoke Functions(8)"
 
     * **stkStaking**   
     Governance token을 staking 한다
@@ -319,7 +326,7 @@
     ```  
         Parameters     
            
-        | *Param*        | Description                          |
+        | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | amount   | staking 수량(묶음 단위로 입력하여야 함) |
         | period   | staking 기간 |   
@@ -333,7 +340,7 @@
     ```  
         Parameters     
            
-        | *Param*        | Description                          |
+        | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | id   | staking id |
 
@@ -352,7 +359,7 @@
     ```  
         Parameters     
            
-        | *Param*        | Description                          |
+        | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | token   | 배당 할 token address |
 
@@ -366,7 +373,7 @@
     ```  
         Parameters     
            
-        | *Param*        | Description                          |
+        | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | stakingUnit   | staking 묶음 단위 |
 
@@ -378,14 +385,14 @@
     ```  
 
     - - -
-    * **burn**   
+    * **invokeBurn**   
     swap pool 수수료 중 Governor 몫의 Governance token과   
     LPT 강화에 성공한 Incentive의 일부 Governor 몫은 
     Governance token contract address로 적립된다   
     이렇개 적립된 Governance token을 소각한다   
     DAO의 안건 상정과 투표로 결정 된다   
     ``` java
-        function burn( uint256 amount ) 
+        function invokeBurn( uint256 amount ) 
                     public noReentrancy 
                     checkPermission( uint16( ENUMPERMISSIONS.DAO ) )
     ```  
@@ -399,14 +406,14 @@
             amount는 Governance token address의 balance를 초과 할 수 없다   
 
     - - -
-    * **recycle**   
+    * **invokeRecycle**   
     swap pool 수수료 중 Governor 몫의 Governance token과   
     LPT 강화에 성공한 Incentive의 일부 Governor 몫은 
     Governance token contract address로 적립된다
     이렇게 적립된 Governance token을 재활용 가능 하도록      
     DAO의 안건 상정과 투표로 결정하여 Mine으로 전송 한다
     ``` java
-        function recycle( uint256 amount ) 
+        function invokeRecycle( uint256 amount ) 
                     public override noReentrancy 
                     checkPermission( uint16( ENUMPERMISSIONS.DAO ) )
     ```  

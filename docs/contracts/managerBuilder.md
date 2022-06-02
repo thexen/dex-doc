@@ -1,20 +1,20 @@
 # **MANAGER BUILDER**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyCreator*   
      - contract를 생성 한 account(contract) 만 호출 가능   
    
-=== "Inquery Functions"
+=== "Inquery Functions(0)"
 
     
-=== "Invoke Functions"
+=== "Invoke Functions(1)"
 
     * **registPermission**   
     token 등급을 등록한다   
@@ -25,7 +25,7 @@
     ```  
         Parameters     
            
-        | *Param*        | Description                          |
+        | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | token   | ERC20 token contract address |
         | grade   | ERC20 token 등급 |   

@@ -1,17 +1,17 @@
 # **MINE**
 - - -
 
-# **Address**
+## **Address**
 * ADDRESS
 - - -
 
-# **Events & Functions**
+## **Events & Functions**
 
 !!! note
     *onlyCreator*   
      - contract를 생성 한 account(contract) 만 호출 가능( `GBuilder contract에서 생성`)        
 
-=== "Inquery Functions"
+=== "Inquery Functions(4)"
 
     * **inqueryMiningAmount**   
     모든 LPT staking holder로 mining(air drop)될 Governance token의 수량을 조회한다
@@ -20,7 +20,7 @@
     ```   
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | mining 수량 |
         | uint256 | mining 수수료 |
@@ -33,7 +33,7 @@
     ```  
         Returns     
 
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | bool | true mining 가능, false 불가능 |        
 
@@ -46,13 +46,13 @@
     ```   
         Parameters   
                 
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | swapPool | swap pool contract address |   
                             
         Returns   
         
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | 가장 최근에 invokeMining() function이 호출 된 시간 |    
         | uint8 | swap pool 가중치 |    
@@ -67,18 +67,18 @@
     ```  
         Parameters   
                 
-        | *Param*      | Description                          |
+        | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
         | swapPool | swap pool contract address |   
                             
         Returns   
         
-        | *Return*    | Description                          |
+        | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | uint256 | mining 가능한 수량 |    
 
     
-=== "Invoke Functions"
+=== "Invoke Functions(3)"
 
     * **invokeStart**   
     mining을 시작 한다
