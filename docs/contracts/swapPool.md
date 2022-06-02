@@ -40,6 +40,8 @@
             uint256     totalLPT;               //발행된 전체 LPT 수
             uint256     const;                  //교환 상수
             bool        depositable;            //예치 가능 여부
+            bool        minable;                //마이닝 가능 여부
+            uint256     weight;                 //가중치
         } 
         ```
     - - - 
