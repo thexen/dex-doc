@@ -59,6 +59,7 @@ StakingHolder에 staking한 staker들과 경쟁하여 보상을 받게 됩니다
 유동성 풀의 가중치 계산과 분배 경쟁(마이닝)에 참여 여부 결정은 아래 코드와 같습니다     
 !!! info "분배 경쟁에 참여가 가능한 Staking Holder 조건"
     분배 경쟁에 참여 가능한 StakingHolder는 ERC20 Token 등급이 B(2) 이상 으로만 구성되어야 합니다   
+DAO의 투표로 등급을 A(3) 까지 올릴수 있습니다   
 ```C++
     weight = iTokenManager.inqueryTokenGrade(firstToken)  * iTokenManager.inqueryTokenGrade(secondToken);
     ...

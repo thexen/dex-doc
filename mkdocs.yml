@@ -41,6 +41,7 @@ nav:
     - LPT: features/lpt.md 
     - DAO: features/dao.md 
     - TOKENTIER: features/tokenGrade.md 
+    - WEIGHT: features/weight.md 
   - 'User Guide':
     - 홈1: index2.md 
     - 홈2: index.md 

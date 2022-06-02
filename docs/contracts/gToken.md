@@ -71,10 +71,10 @@
 
     - - -
 
-    * **inqueryGovernaceTokendBalance**   
-    적립되어 있는 Governance token의 수량을 조회 한다
+    * **inqueryGovernorTokendBalance**   
+    Governor의 몫으로 적립되어 펀드로 조성되어 있는 Governance token의 수량을 조회 한다
     ``` java
-        function inqueryGovernaceTokendBalance() public view returns ( uint256 )
+        function inqueryGovernorTokendBalance() public view returns ( uint256 )
     ```   
         Returns     
 
@@ -83,8 +83,9 @@
         | uint256 | 적립되어 있는 Governance token 수량 |   
 
         !!! info
-            Governance token staking holder에 적립되는 Governance token은    
-            swap pool에서 발생된 수수료의 일부와 강화 수수료를 Governance token으로 사용한 경우 적립 되며      
+            1. swap pool에서 발생된 수수료의 일부 중 Governor 몫의 Governance token    
+            2. 특정 구간 강화 성공시 강화 수수료로 적립된 Governor 몫의 Governance token    
+            3. 안건 상정 비용   
             DAO 안건 상정과 투표로 burn과 transferTo를 수행 할 수 있다     
 
     - - -
