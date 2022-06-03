@@ -262,13 +262,13 @@ address:
         | address | LPT staking holder contract address |
 
     - - -    
-    * **inqueryFeeIncome**   
-    swap pool의 기간별 수수료 수익을 조회 한다
+    * **inqueryDailyStat**   
+    swap pool의 기간별 거래량 및 수수료 수익을 조회 한다
     ``` java
-        function inqueryFeeIncome( address swapPool
+        function inqueryDailyStat( address swapPool
                                 , uint256 startDate
                                 , uint256 period ) 
-                            public view returns ( TSPFeeIncome[] memory ) 
+                            public view returns ( TDailyStat[] memory ) 
     ```  
         Parameters     
            
@@ -282,17 +282,17 @@ address:
 
         | *Return*    | Description                          |
         | :--------- | :------------------------------------ |
-        | TSPFeeIncome | 날짜별 수수료 수익 |
+        | TDailyStat | 일별 거거랭 및 수수료 수익 |
 
         ``` C++
-        struct TSPFeeIncome {
-            uint256             date;           //날짜
-            TUINT256Pair        feeIncome;      //수수료 수익
+        struct TDailyStat {
+            uint256             date;
+            TStatistics         stat;
         }
-        struct TUINT256Pair {
-            uint256             first;          //first pair token 수수료 수익
-            uint256             second;         //first pair token 수수료 수익
-        }                
+        struct TStatistics {
+            TUINT256Pair        tradingVolume;
+            TUINT256Pair        feeIncome; 
+        }
         ```
 
         !!! info
@@ -390,17 +390,18 @@ address:
         | accumulation   | 배당률(400,0000,000(40%)~600,000,000(60%), 단위 1/1,000,000,000)|
 
     - - -    
-    * **invokeFeeIncome**   
-    swap 수수료 수익을 기록 한다
+    * **invokeDailyStat**   
+    swap 거래량 및 수수료 수익을 일단위로 기록 한다
     ``` java
-        function invokeFeeIncome( ENUMPAIR fromEnumToken, uint256 income ) public 
+        function invokeDailyStat( ENUMPAIR fromEnumToken, uint256 tradingAmount, uint256 feeIncome ) public 
     ```  
         Parameters     
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | fromEnumToken*   | binding 된 pair token( first(0) 또는 second(1) ) |
-        | income   | 수수료 수익 |
+        | tradingAmount   | 거래량 |
+        | feeIncome   | 수수료 수익 |
    
     
 === "Events"

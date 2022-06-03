@@ -1,8 +1,12 @@
 # **PERMISSION**
 - - -
+j100Swap 생태계 contract의 function 호출 권한을 관리하는 contract 입니다   
 
+- - -
 ## **Address**
-* ADDRESS
+IObjects의 inqueryPermission() function 사용
+
+address:
 - - -
 
 ## **Events & Functions**

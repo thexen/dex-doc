@@ -39,6 +39,7 @@ nav:
   - FEATURES:
     - MINING: features/mining.md 
     - LPT: features/lpt.md 
+    - STAKING: features/staking.md 
     - DAO: features/dao.md 
     - TOKENTIER: features/tokenGrade.md 
     - WEIGHT: features/weight.md 

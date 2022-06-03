@@ -1,8 +1,12 @@
-# **TEA MVAULT**
+# **TEAM VAULT**
 - - -
+j100Swap 개발팀 금고 입니다   
 
+- - -
 ## **Address**
-* ADDRESS
+IObjects의 inqueryTeamVault() function 사용
+
+address:
 - - -
 
 ## **Events & Functions**
