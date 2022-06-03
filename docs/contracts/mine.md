@@ -1,9 +1,12 @@
 # **MINE**
 - - -
+Governance token을 Staking Holder로 분배 해주는 역할의 contract 입니다    
 
-## **Address**
-* ADDRESS
 - - -
+## **Address**
+IObjects의 inqueryGoveranceMine() function 사용
+
+address:
 
 ## **Events & Functions**
 

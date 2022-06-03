@@ -1,8 +1,13 @@
-# **GOVERNANCETOKEN**
+# **GOVERNANCE TOKEN**
 - - -
+j100Swap 생태계 Governance token contract 입니다  
+ERC20을 상속하여 개발 되었으며 staking기능이 내장되 있습니다   
 
+- - -
 ## **Address**
-* ADDRESS
+IObjects의 inqueryGovernanceToken() function 사용
+
+address:
 - - -
 
 ## **Events & Functions**
