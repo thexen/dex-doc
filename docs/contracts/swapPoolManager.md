@@ -1,8 +1,13 @@
-# **SWAPPOOLMANAGER**
+# **SWAP POOL MANAGER**
 - - -
+j100 swap 생태계를 관리 하는 manager contract 3개가 존재 합니다, 그 중 유동성 풀들을    
+등록하고 관리하는 역할을 하는 contract입니다  
 
+- - -
 ## **Address**
-* ADDRESS
+IObjects의 inquerySwapPoolManager() function 사용
+
+address:
 - - -
 
 ## **Events & Functions**

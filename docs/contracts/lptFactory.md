@@ -1,8 +1,13 @@
 # **LPT FACTORY**
 - - -
+Swap pool Factory에서 유동성 풀을 생성 할때 호출 되어 유동성 풀에 dependency한    
+LPT contract를 생성하는 역할을 합니다 
 
+- - -
 ## **Address**
-* ADDRESS
+IObjects의 inqueryLPTFactory() function 사용
+
+address:    
 - - -
 
 ## **Events & Functions**

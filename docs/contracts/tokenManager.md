@@ -1,8 +1,13 @@
-# **TOKENMANAGER**
+# **TOKEN MANAGER**
 - - -
+j100 swap 생태계를 관리 하는 manager contract 3개가 존재 합니다, 그 중 하나로 ERC20 token을   
+등록하고 관리하는 역할을 하는 contract입니다  
 
+- - -
 ## **Address**
-* ADDRESS
+IObjects의 inqueryTokenManager() function 사용
+
+address:   
 - - -
 
 ## **Events & Functions**

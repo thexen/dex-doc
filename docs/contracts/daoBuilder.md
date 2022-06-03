@@ -1,8 +1,12 @@
 # **DAO BUILDER**
 - - -
+DAO contract를 deploy하고 objects에 등록하는 역할을 합니다   
 
+- - -
 ## **Address**
-* ADDRESS
+IObjects의 inqueryDAO() function 사용
+
+address:
 - - -
 
 ## **Events & Functions**

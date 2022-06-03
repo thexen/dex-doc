@@ -1,6 +1,9 @@
 # **SWAP POOL**
 - - -
-유동성 풀(swap pool)입니다    
+DEX의 중추적인 역할을 하는 유동성 풀(swap pool)입니다    
+대표적인 유동성 예치, 교환등 여러가지 기능을 가지고 있으며 swap helper를 사용하여 다른 유동성 풀과의    
+연계도 가능합니다
+
 
 ??? info "swap pool에 dependency 한 contract address 조회하기"
     

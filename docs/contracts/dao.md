@@ -1,8 +1,19 @@
 # **DAO**
 - - -
+j100 swap 생태계의 의사 결정과 집행에 개발팀의 개입을 철저하게 막고자   
+(예외 mine contract의 enable/disable 기능만 개입)
+DAO라는 개념을 도입하였습니다  
+안건 상정은 누구나 가능하게 되어 있고 상정된 안건에 대한 의사 결정은    
+Governance token staking으로 Governor의  자격 획득 경우에만 가능하게 되어있습니다       
+안건 상정과 투표권 송부, 투표하기 등의 주요 정책들을 결정하고 적용하는 역할을    
+하는 contract 입니다
 
+
+- - -
 ## **Address**
-* ADDRESS
+IObjects의 inqueryDAO() function 사용
+
+address:
 - - -
 
 ## **Events & Functions**

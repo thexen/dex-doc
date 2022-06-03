@@ -1,10 +1,14 @@
 # **RARITY**
 - - -
-rarity의 확률을 관리하고 결정하는 역할을 하는 contract 입니다
+LPT Rarity의 등급을 결정 하는 확률과 강화를 할 수 있도록 해주는 contract 입니다   
+이 기능과 더불어 강화재료로 사용된 ERC20 token을 적립하는 곳이기도 하고 특정 구간   
+강화에 성공하면 보상을 지급해주기도 합니다   
 
 - - -
 ## **Address**
-* ADDRESS
+IObjects의 inqueryRarity() function 사용   
+
+address:      
 - - -
 
 ## **Events & Functions**

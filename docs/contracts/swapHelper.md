@@ -1,12 +1,16 @@
 # **SWAP HELPER**
 - - -
 
-swap(교환)을 도와 주는 contract 입니다
+유동성 풀에서 제공 되지 않는 기능이 있는데 여러개의 유동성 풀을 거쳐서 교환을 한다거나 특정 ERC20 token과의    
+상대적인 가치평가를 하는 것입니다, 이런 기능을 제공 해주는 contract 입니다
 
 - - -
 
 ## **Address**
-* ADDRESS
+IObjects의 inquerySwapHelper() function 사용   
+
+address:      
+
 - - -
 
 ## **Events & Functions**

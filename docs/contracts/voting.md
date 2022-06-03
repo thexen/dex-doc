@@ -1,8 +1,13 @@
 # **VOTING**
 - - -
+j100 swap 생태게에서 안건이 상정되면 Governor들에게 투표권이 송부되는데 송부된 투표권을    
+행사 할 수 있는 역할을 하는 contract입니다  
 
+- - -
 ## **Address**
-* ADDRESS
+CDAO의 inqueryVoting(uint256 agendaId) function 사용
+
+address:
 - - -
 
 ## **Events & Functions**

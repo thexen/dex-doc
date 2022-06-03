@@ -1,8 +1,14 @@
 # **LPT**
 - - -
+유동성 공급을 하면 공급 증명서와 같은 것을 수령하게 되는데 타 DEX와 달리    
+j100 swap에서는 강화 가능한 NFT화 된 LPT를 수령하게 됩니다   
+이런 처리를 하는 contract 입니다   
 
+- - -
 ## **Address**
-* ADDRESS
+ISwapPoolManager의 inqueryLPT(address swapPool) function 사용
+
+address:   
 - - -
 
 ## **Events & Functions**

@@ -1,8 +1,15 @@
 # **SWAP POOL FACTORY**
 - - -
+j100 swap 생태계의 유동성 풀을 생성하는 contract 입니다   
+유동성 풀 생성시 LPT Contract와 LPTStakingHolder Contract도 같이 생성 되어    
+SwapPoolManager와 TokenManager에 등록되어 관리가 됩니다   
+등록 수수료는 500 J100 입니다   
 
+- - -
 ## **Address**
-* ADDRESS
+IObjects의 inquerySwapPoolFactory() function 사용
+
+address:      
 - - -
 
 ## **Events & Functions**

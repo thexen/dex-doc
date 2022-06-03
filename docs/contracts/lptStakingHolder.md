@@ -1,8 +1,15 @@
 # **LPT STAKING HOLDER**
 - - -
+j100생태계의 유동성 공급으로 LPT를 받게 되는데 예치로 받은 LPT를 강화, NFT 마켓 판매,     
+staking을 할 수 있습니다   
+유동성을 공급한 풀에 의존적인 staking holder 역할을 하는 contract이며 Governance token   
+minaing을 가능하게 합니다    
 
+- - -
 ## **Address**
-* ADDRESS
+ISwapPoolManager의 inqueryLPTStakingHolder(address swapPool) function 사용
+
+address:   
 - - -
 
 ## **Events & Functions**
