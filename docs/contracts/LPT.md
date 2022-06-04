@@ -157,6 +157,7 @@ address:
     ``` java
         function enhance( uint256 tokenId
                     , address material
+                    , uint256 limitAmount
                     , uint randSeed
                     , address[] memory route ) 
                 public returns( bool, uint )
@@ -167,6 +168,7 @@ address:
         | :----------- | :------------------------------------ |
         | tokenId   | 강화 할 token Id|
         | material   | 강화 재료로 사용 될 ERC20 token contract address | 
+        | limitAmount | 강화 재료의 최대 수량 |
         | randSeed   | rand seed |
         | route   | material의 상대 가치 측정을 위한 route( 목적지 -  bjects contract의 inqueryWorldCurrency() ) |         
 
