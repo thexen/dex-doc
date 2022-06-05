@@ -76,7 +76,36 @@ address:
 
     
     
-=== "Invoke Functions(1)"
+=== "Invoke Functions(2)"
+
+    * **registPermission**   
+    ERC20 token 'from'의 fromAmount 수량으로 ERC20 token 'to'로 교환 한다  
+    ``` java
+        function exchange( address from
+                        , uint256 fromAmount
+                        , address to
+                        , uint256 minimumQuantity
+                        , address[] memory route ) 
+                    public payable returns( uint256 )
+    ```  
+        Parameters     
+           
+        | *Param*      | *Description*                          |
+        | :--------- | :------------------------------------ |
+        | from | ERC20 token contract address |
+        | fromAmount | from의 수량 |   
+        | to | ERC20 token contract address  |    
+        | minimumQuantity | 교환되어 받을 to의 수량이 minimumQuantity 보다 크거나 같아야 교환이 이루어지게 하는 수치 |    
+        | route | from 에서 to 까지 도달 가능한 경로 |    
+
+        Returns     
+
+        | *Return*    | *Description*                          |
+        | :--------- | :------------------------------------ |
+        | uint256 | 교환된 to의 수량 |
+
+        !!! info
+            from이 address(0) 이면 coin(klay)을 to로 교환 하는 것이므로 fromAmount는 의미가 없다   
 
     * **registPermission**   
     ERC20 token 'from'의 fromAmount 수량으로 ERC20 token 'to'로 교환 한다  
