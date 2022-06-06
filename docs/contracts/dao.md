@@ -14,20 +14,28 @@ Governance token staking으로 Governor의  자격 획득 경우에만 가능하
 IObjects의 inqueryDAO() function 사용
 
 address:
+
 - - -
+## **Deployer**
+CDAO contract는 CDAOBuilder에서 deploy를 합니다   
 
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| daoBuilder[ CDAOBuilder ];
+  daoBuilder -->|deploy| dao[ CDAO ];
+```    
+  
+`Objects`는 CDAO에게 아래 contract를 대상으로 `ENUMPERMISSIONS.DAO` 권한을   
+부여합니다
+
+!!! note ""   
+    CStakableGToken   
+    CSwapPoolManager   
+    CTokenManager   
+    CRarity   
+
+- - -
 ## **Events & Functions**
-
-> onlyVoting - voting contract만 호출 가능        
-> onlyConsent - 상정된 안건의 투표결과로 호출 가능( 호출 조건 발행된 투표권의 과반수이상 투표 참석, 투표 참석 중 과반수 이상 찬성)
-
-!!! note
-    *onlyVoting*   
-     - voting contract만 호출 가능
-    *onlyConsent*   
-     - 상정된 안건이 투표를 거처 가결되면 호출 가능   
-     - 가결 조건 투표권의 과반수이상 투표 참석, 투표 참석 중 과반수 이상 찬성
-
 
 === "Inquery Functions(3)"
 
@@ -118,7 +126,7 @@ address:
 
     - - -
     * **invokeModifyTokenAttr**   
-    Token 등급을 한단계 상승시킨다
+    Token의 상태를 변경 한다
     ``` java
         function invokeModifyTokenAttr( address token, uint8 mod ) 
                     public onlyVoting noReentrancy

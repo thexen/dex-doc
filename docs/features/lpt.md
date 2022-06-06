@@ -4,7 +4,7 @@ j100Swap 생태계는 유동성 공급의 증명으로 받게되는 LPT를 ERC72
 시작된 프로젝트입니다    
 LPT를 ERC721 발행하여 제공 할 경우 발생할수 있는 문제점과 단점에 대해서도 많은 고찰을 하였고   
 문제점에 대한 대안과 향후 계획도 준비 중입니다   
-ERC20의 LPT없는 가치 창출의 기회를 만들어 드릴수 있을 거라라고 감히 말씀 드립니다  
+ERC20의 LPT에 없는 가치 창출의 기회를 만들어 드릴수 있을 거라라고 감히 말씀 드립니다  
 - - -
 
 ## **단점 및 보완**
@@ -23,18 +23,18 @@ DAO에 의해 의결되고 투표하여 처리하면 됩니다
 입니다
 
 ??? info "cloud funding contract"
-    정수 개의 LPT를 받을 수 있을 정도의 소규모 자산들을 모아 유동성 풀에 예치시켜 주는      
+    정수 개의 LPT를 받을 수 있을 정도의 소규모 자산들을 모아 유동성 공급을 가능하게 해주는    
     contract   
 
 - - -
 
 ## **차별화**
-j100Swap 생태계에 유동성 제공으로 받은 ERC721(NFT)화 된 LPT는 단순한 staking만을 위한 것이    
+j100Swap 생태계에 유동성 공급으로 받은 ERC721(NFT)화 된 LPT는 단순한 staking만을 위한 것이    
 아닙니다   
 NFT 마켓에서 거래 되고 있는 NFT들의 가치는 사고파는 사람들이 결정 하는 것이여서 실물 가치가   
 없지만 j100Swap 생태계의 LPT는 binding 된 pair token 수량 만큼 가치를 가지고 있으며 rarity를   
 부여하여 가치 상승을 유도하였습니다      
-rarity는 staking의 가중치에도 적용되어 riarity의 실용성에 대한 가치도 부여 되었다고 하겠습니다   
+rarity는 staking의 가중치에도 적용되어 riarity의 실용성에 관한 불신을 제거하였습니다      
 
 LPT를 staking하게 되면 LPT의 가중치로 mining 수량이 결정 되는데 rarity가 상승 할 수록 가중치도  
 같이 상승하여 보다 많은 Governance token을 보상 받게 됩니다   
@@ -86,38 +86,6 @@ LPT 강화는 staking 상태에서 되지 않습니다
 | A(3) | 300,000 |  300,000~400,000 | 15 | 13~17 | - |     
 | B(2) | 500,000 |  불가 | 12 | 불가 | -  |     
 | C(1) | 1,000,000 | 불가 | 10 | 불가 | - |     
-
-
-## **STAKING**
-
-j100Swap에서는 두가지의 staking 모델이 있습니다   
-하나는 Governance token을 staking 하는 것이고 또 다른 하나는 LPT를 하는 것입니다   
-여기에서는 LPT staking에 관한 내용을 다룰것입니다   
-
-유동성 제공으로 LPT를 받아 강화를 한 후 staking을 하던 무강화 상태에서 staking을 하던   
-dependency 한 LPTStakingHolder에 제한된 LPT로 staking이 가능합니다    
-다시 말해 유동성을 제공한 swap pool에서 받은 LPT는 swap pool에 dependency 한    
-LPTStakingHolder에 만 staking이 가능 합니다   
-
-그리고 staking을 하였다고 Governance token의 reward를 기대 할 수 없습니다   
-j100Swap에서 관리하는 ERC20 Token 등급 B(2) 이상인 token으로만 구성된 유동성 풀   
-이어야 reward를 받을 수 있습니다   
-ERC20 Token 등급은 DAO로 등급 조절이 가능하니 자세한 내용은 Token Tier 편을 참고   
-하시기 바랍니다    
-[:fontawesome-solid-link: ERC20 Token Tier ](/features/tokenGrade){ .md-button }
-[:fontawesome-solid-link: Mining ](features/mining){ .md-button }    
-
-
-staking으로 받을수 있는 Governance token 계산   
-``` C++
-    A = LPTStakingHolder가 분배 받은 수량;
-    B = staker가 소유한 LPT 가중치 합;
-    C = LPTStakingHolder에 staking 되어 있는 LPT 가중치 합;
-    mining(Governance token reward 수량) = A * B / C;
-```
-
-LPTStakingHolder가 분배 받을 수량 계산   
-[:fontawesome-solid-link: SWAP POOL WEIGHT 참고](/features/mining/#swap-pool-weight){ .md-button }    
 
 
 ## **j100Swap 생태계의 LPT 가치**

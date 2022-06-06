@@ -7,7 +7,18 @@ j100 swap 생태계를 관리 하는 manager contract 3개가 존재 합니다, 
 ## **Address**
 IObjects의 inqueryTokenManager() function 사용
 
-address:   
+address: 
+- - -
+
+## **Deployer**
+
+CTokenManager contract는 CManagerBuilder서 deploy 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| mBuilder[ CManagerManager ];
+  mBuilder --> |deploy| tokenManager[ CTokenManager];
+```
 - - -
 
 ## **Events & Functions**

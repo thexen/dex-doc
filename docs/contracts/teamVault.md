@@ -9,6 +9,18 @@ IObjects의 inqueryTeamVault() function 사용
 address:
 - - -
 
+## **Deployer**
+
+CTeamVault contract는 개발팀에서 deploy를 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| vault[ CTeamVault ];
+ 
+```
+
+- - -
+
 ## **Events & Functions**
 
 !!! note

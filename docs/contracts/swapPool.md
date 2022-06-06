@@ -16,8 +16,22 @@ DEX의 중추적인 역할을 하는 유동성 풀(swap pool)입니다
 ## **Address**
 ISwapPoolManager의 inquerySwapPool( ... ) function 사용   
 
-address:      
+address:     
+- - -
 
+## **Deployer**
+
+CSwapPool contract는 CSwapPoolFactory에 swap pool 생성을 요청하면   
+CSwapPoolFactory에서 deploy 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| spF[ CSwapPoolFactory ];
+  acc[Account] -->|create swap pool| spF;
+  spF -->|deploy| lpt[CLPT];
+  spF -->|deploy| lptSH[CLPTStakingHolder];
+  spF -->|deploy| sp[CSwapPool];
+```
 - - -
 
 ## **Events & Functions**

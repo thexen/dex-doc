@@ -9,6 +9,16 @@ IObjects의 inqueryGovernaceBuilder() function 사용
 address:    
 - - -
 
+## **Deployer**
+
+CGovernanceBuilder contract는 개발팀에서 deploy를 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| gBuilder[ CGovernanceBuilder ];
+ ```
+- - -
+
 ## **Events & Functions**
 
 !!! note

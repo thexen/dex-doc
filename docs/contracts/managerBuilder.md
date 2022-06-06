@@ -9,6 +9,17 @@ IObjects의 inqueryManagerBuilder() function 사용
 address:
 - - -
 
+## **Deployer**
+
+CManagerBuilder contract는 개발팀에서 deploy 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| mBuilder[ CManagerBuilder ];
+ 
+```
+- - -
+
 ## **Events & Functions**
 
 !!! note

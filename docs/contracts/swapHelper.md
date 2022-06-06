@@ -10,7 +10,16 @@
 IObjects의 inquerySwapHelper() function 사용   
 
 address:      
+- - -
 
+## **Deployer**
+
+CSwapHelper contract는 개발팀에서 deploy를 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| sh[ CSwapHelper ];
+```
 - - -
 
 ## **Events & Functions**

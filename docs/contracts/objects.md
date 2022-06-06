@@ -1,12 +1,24 @@
 # **OBJECTS**
 - - -
-j100Swap 생태계의 contract들이 deploy 되면 자동 등록되어 관리되면서 생태계의 contract들이   
-유기적으로 호출 할 수 있도록 만들어진 contract 입니다
+j100Swap 생태계의 contract들은 deploy 되면 Objects contract에 자동 등록되어 생태계의 모든 contract에서    
+유기적으로 호출 가능도록 설계, 개발 된 contract 입니다   
 
 - - -
 ## **Address**
 
 address:
+- - -
+
+## **Deployer**
+
+CObjects contract는 개발팀에서 deploy를 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| objs[ CObjects ];
+ 
+```
+
 - - -
 
 ## **Events & Functions**
@@ -16,7 +28,7 @@ address:
      - 등록 권한을 부여 받은 contract address 만 호출 가능함( `Objects, Factory 계열의 contract` )
 
 
-=== "Inquery Functions"
+=== "Inquery Functions(18)"
 
     * **inqueryWorldCurrency**   
     Stable token의 contract Address를 조회 한다   
@@ -202,6 +214,12 @@ address:
         | resource   | 접근하고자 하는 contract address |
         | accessor   | resource contract의 invoke functions을 호출 할 contract address|   
         | permission | 접근 권한 코드 |   
+
+        !!! warning "호출 권한을 부쳐 받은 contract"   
+            Factory 계열의    
+            CLPTFactory   
+            CLPTStakingHolderFactory   
+            CSwapPoolFactory    
 
 === "Events"
     1. Sed sagittis eleifend rutrum

@@ -8,8 +8,21 @@ j100 swap 생태게에서 안건이 상정되면 Governor들에게 투표권이 
 CDAO의 inqueryVoting(uint256 agendaId) function 사용
 
 address:
-- - -
 
+- - -
+## **Deployer**
+CVoting contract는 CDAO에 안건을 상정 하면 CDAO에서 deploy 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| daoBuilder[ CDAOBuilder ];
+  daoBuilder -->|deploy| dao[ CDAO ];
+  proposer[proposer] --> |agenda proposal| dao;
+  dao -->|deploy| voting[ CVoting ];
+ 
+```
+
+- - -
 ## **Events & Functions**
 
 !!! note

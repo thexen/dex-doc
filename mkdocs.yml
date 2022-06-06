@@ -31,7 +31,6 @@ theme:
 nav: 
   - 소개: index.md
   - 프로토콜 개요: index.md
-  - 특 장점: index.md
   - 주의 사항: index.md
   - TOKENOMICS:
     - TOKENOMICS: tokenomics/tokenomics.md 
@@ -48,6 +47,7 @@ nav:
     - 홈2: index.md 
     - 홈3: index.md 
   - CONTRACTS: 
+    - MODIFIER: contracts/modifier.md 
     - OBJECTS: contracts/objects.md 
     - PERMISSION: contracts/permission.md 
     - TEAMVAULT: contracts/teamVault.md 
@@ -68,6 +68,7 @@ nav:
     - SWAP POOL: contracts/swapPool.md    
     - RARITY: contracts/rarity.md 
     - SWAP HELPER: contracts/swapHelper.md
+    - DAO HELPER: contracts/daoHelper.md
   - '보안 감사': index.md 
   - GLOSSARY: glossary/glossary.md 
 

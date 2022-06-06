@@ -10,6 +10,17 @@ IObjects의 inquerySwapPoolManager() function 사용
 address:
 - - -
 
+## **Deployer**
+
+CSwapPoolManager contract는 CManagerBuilder서 deploy 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| mBuilder[ CManagerManager ];
+  mBuilder --> |deploy| spManager[ CSwapPoolManager];
+```
+
+- - -
 ## **Events & Functions**
 
 !!! note

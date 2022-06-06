@@ -11,6 +11,16 @@ IObjects의 inqueryRarity() function 사용
 address:      
 - - -
 
+## **Deployer**
+
+CRarity contract는 개발팀에서 deploy를 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| rarity[ CRarity ];
+```
+- - -
+
 ## **Events & Functions**
 
 !!! note

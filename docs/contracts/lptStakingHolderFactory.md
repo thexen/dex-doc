@@ -11,6 +11,26 @@ IObjects의 inqueryLPTStakingHolderFactory() function 사용
 address:      
 - - -
 
+## **Deployer**
+
+CLPTStakingHolderFactory contract는 개발팀에서 deploy 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| lptSHF[ CLPTStakingHolderFactory ];
+```
+
+`Objects`는 CLPTStakingHolderFactory에게 아래 contract를 대상으로 `ENUMPERMISSIONS.FACTORY` 권한을   
+부여합니다
+
+!!! note ""   
+    CSwapPoolManager      
+    CTokenManager   
+
+마지막으로 `Objects`의 registPermission() 사용 권한을 부여 받습니다   
+
+- - -
+
 ## **Events & Functions**
 
 !!! note

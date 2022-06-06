@@ -8,6 +8,19 @@ IObjects의 inqueryGoveranceMine() function 사용
 
 address:
 
+- - -
+## **Deployer**
+
+CMine contract는 CGovernanceBuilder에서 deploy를 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| gBuilder[ CGovernanceBuilder ];
+  gBuilder -->|deploy| mine[ CMine ];
+ 
+```
+
+- - -
 ## **Events & Functions**
 
 !!! note

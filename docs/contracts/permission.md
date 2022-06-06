@@ -9,6 +9,19 @@ IObjects의 inqueryPermission() function 사용
 address:
 - - -
 
+## **Deployer**
+
+CPermission contract는 CObjects가 deploy 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| objs[ CObjects ];
+  objs -->|deploy| perm[ CPermission ];
+ 
+```
+
+- - -
+
 ## **Events & Functions**
 
 !!! note

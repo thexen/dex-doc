@@ -12,6 +12,19 @@ ISwapPoolManager의 inqueryLPTStakingHolder(address swapPool) function 사용
 address:   
 - - -
 
+## **Deployer**
+
+CLPStakingHolder contract는 CSwapPoolFactory에 swap pool 생성을 요청하면   
+CSwapPoolFactory에서 deploy 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| spF[ CSwapPoolFactory ];
+  acc[Account] -->|create swap pool| spF;
+  spF -->|deploy| lpt[CLPTStakingHolder];
+```
+- - -
+
 ## **Events & Functions**
 
 !!! note

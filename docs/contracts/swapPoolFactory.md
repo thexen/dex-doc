@@ -12,9 +12,34 @@ IObjects의 inquerySwapPoolFactory() function 사용
 address:      
 - - -
 
+## **Deployer**
+
+CSwapPoolFactory contract는 개발팀에서 deploy 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| spF[ CSwapPoolFactory ];
+```
+
+`Objects`는 CSwapPoolFactory에게 아래 contract를 대상으로 `ENUMPERMISSIONS.FACTORY` 권한을   
+부여합니다
+
+!!! note ""   
+    CSwapPoolManager      
+    CTokenManager  
+
+그리고 아래 contract를 대상으로 `ENUMPERMISSIONS.ONLY_SWAPPOOL_FACTORY` 권한을   
+추가적으로 부여합니다
+
+!!! note ""   
+    CLPTFactory      
+    CLPTStakingHolderFactory        
+
+마지막으로 `Objects`의 registPermission() 사용 권한을 부여 받습니다   
+
+- - -
+
 ## **Events & Functions**
-
-
 
 === "Inquery Functions(0)"
     

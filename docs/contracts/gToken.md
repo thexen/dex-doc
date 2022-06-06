@@ -8,6 +8,18 @@ ERC20을 상속하여 개발 되었으며 staking기능이 내장되 있습니�
 IObjects의 inqueryGovernanceToken() function 사용
 
 address:
+
+- - -
+## **Deployer**
+CStakableGToken contract는 CGovernanceBuilder에서 deploy를 합니다   
+
+``` mermaid
+graph LR
+  dev[Dev.Team] -->|deploy| gBuilder[ CGovernanceBuilder ];
+  gBuilder -->|deploy| gToken[ CStakableGToken ];
+ 
+```
+
 - - -
 
 ## **Events & Functions**
