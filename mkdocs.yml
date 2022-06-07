@@ -29,8 +29,8 @@ theme:
       note: octicons/tag-16
 
 nav: 
-  - 소개: index.md
-  - 프로토콜 개요: index.md
+  - 소개: intro/intro.md
+  - 프로토콜 개요: intro/protocol.md
   - 주의 사항: index.md
   - TOKENOMICS:
     - TOKENOMICS: tokenomics/tokenomics.md 
