@@ -48,8 +48,9 @@ amount에는 교환 수수료가 포함 되어 있어 교환 수수료를 제외
     ``` java
         r = to - K / (from+swapAmount)
     ```   
-그리고 수수료(`amount - swapAmount`)의 일부 Governor 인센티브를 제외한 유동성 공급자의 인센티브는   
-유동성 풀에 예치 되어 contant K는 천천히 증가하게 됩니다   
+그리고 수수료(`amount - swapAmount`)의 일부 Governor 몫(인센티브)를 제외한 유동성 공급자의   
+인센티브는 유동성 풀에 예치되어 contant K는 천천히 증가하게 됩니다, K가 증가한다는 말은 유동성   
+풀의 자산이 증가한다는 말과 같습니다     
 - - -   
 
 **참여자와 인센티브(수익)**
@@ -76,4 +77,4 @@ Governance token을 staking하면 Governor 자격이 부여 되여 모든 유동
     있습니다   
 
 !!! info "수수료와 Governor 몫"
-    수수료와 수수료의 Governor 몫은 안건 상정통해 Governor의 투표로 변경이 가능합니다   
+    수수료와 수수료의 Governor 몫은 안건 상정과 Governor의 투표로 변경이 가능합니다   
