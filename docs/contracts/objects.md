@@ -28,11 +28,11 @@ graph LR
      - 등록 권한을 부여 받은 contract address 만 호출 가능함( `Objects, Factory 계열의 contract` )
 
 
-=== "Inquery Functions(18)"
+=== "Inquery Functions(19)"
 
     * **inqueryReleaseDate**   
     Staker가 채굴한 Governance token lockup 해지 날짜와 Governance token staking 시작날짜를 조회 한다    
-    ``` java title="bubble_sort.py"
+    ``` java
         function inqueryReleaseDate() public view returns( uint256 )
     ```        
 
@@ -40,7 +40,7 @@ graph LR
     * **inqueryWorldCurrency**   
     Stable token의 contract Address를 조회 한다   
     설정되어 있는 토큰은 Tether 이다.
-    ``` java title="bubble_sort.py"
+    ``` java
         function inqueryWorldCurrency() public view returns( address )
     ```        
    
