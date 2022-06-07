@@ -30,11 +30,10 @@ graph LR
 
 === "Inquery Functions(18)"
 
-    * **inqueryUnlockupBlockNumber**   
-    Staker가 채굴한 Governance token을 claim으로 인출 허용이 되는 block.number를 조회 한다    
-    block.number 부터 claim으로 Governance token을 인출 할 수 있다  
+    * **inqueryReleaseDate**   
+    Staker가 채굴한 Governance token lockup 해지 날짜와 Governance token staking 시작날짜를 조회 한다    
     ``` java title="bubble_sort.py"
-        function inqueryUnlockupBlockNumber() public view returns( uint256 )
+        function inqueryReleaseDate() public view returns( uint256 )
     ```        
 
     - - -
