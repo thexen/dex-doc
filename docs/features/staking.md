@@ -38,6 +38,10 @@ staking으로 Governance token mining 수량 계산
 LPT Staking Holder가 Governance token을 분배 받을 수량 계산   
 [:fontawesome-solid-link: SWAP POOL WEIGHT 참고](/features/mining/#swap-pool-weight){ .md-button }   
 
+!!!warning
+  Governance token 채굴 가능 상태에서 staking이 가능하다
+
+
 - - -
 ## **Goverance token staking**
 Governance token을 staking 하면 Governor 자격을 획득하게 되어 투표권을 얻을수 있으며   
@@ -47,7 +51,37 @@ LPT 강화 성공 인센티브 중 Governor의 몫(20%)을 받게 됩니다
 Governance token을 제외한 j100Swap 생태계에서 유통되는 모든 token이며 수량은 staker들이 staking 한   
 수량의 비율로 각자 보상 받게 됩니다  
 
+!!!warning
+  Governance token Lock-up이 해제 된 상태에서 가능하다
+
 - - -
+## **staking 약정 기간 및 보너스 가중치**
+LPT와 Governance token를 staking 할 때 약정 기간을 무약정, 30일, 90일, 180일, 365일 5가지 중 하나를 선택    
+할 수 있습니다, 각 약정 기간마다 보너스 가중치가 적용됩니다
+
+| *기간*  | *보너스 가중치*  |
+| -----: | :------: |
+| 365일 이상 | 20 |
+| 180일 이상 | 15 |
+| 90일 이상 | 12 | 
+| 30일 이상 | 10 |
+| 무약정  | 1 |
+
+| *약정 종류*  | *staking 회수 가능 날짜*  |
+| -----: | :------: |
+| 무약정 | staking 한 시점으로 부터 다음날 00:00 부터 가능 |
+| 약정  | staking 한 다음날 + 약정기간 00:00 부터 가능 |
+
+* 다만 mining은 약정,무약정 상관없이 staking 즉시 진행됩니다    
+
+!!! info "보너스 가중치 적용 공식"
+  staking 적용 가중치 = (LPT 가중치) * (보너스 가중치)     
+  staking 적용 가중치 = (Governance token 수량) * (보너스 가중치)     
+
+- - -
+
+
+
 
 
 

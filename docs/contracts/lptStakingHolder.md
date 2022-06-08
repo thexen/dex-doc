@@ -108,7 +108,7 @@ graph LR
         | uint256[] | unlock되어 있는 id 목록 |        
 
         !!! warning
-            lock되어 있는 id는 withrawal을 수행 할 수 없다
+            lock되어 있는 id는 Unstaking 수행 할 수 없다
 
     - - -
     * **stkInqueryStakingStatus**   
@@ -271,7 +271,7 @@ graph LR
         struct tConclusion {
             uint256         signedTime;     //계약체결 시간 ( 계약 적용 날짜 계약체결 시간 기준 명일 00:00:00)
             uint256         period;         //계약약정 기간 ( 일 단위 ), 0 이면 무약정 체결
-            bool            locked;         //true 이면 계약약정 기간 동안 철회(withdrawl) 할 수 없음
+            bool            locked;         //true 이면 계약약정 기간 동안 철회(Unstaking) 할 수 없음
             uint256         amount;         //erc20을 staking 할 경우 토큰 수량 또는 가중치
         }        
         ```
@@ -333,10 +333,10 @@ graph LR
         | locked | lock 여부 |                
 
     - - -
-    * **stkWithdrawal**   
+    * **stkUnstaking**   
     staking을 철회(회수) 한다
     ``` java
-        function stkWithdrawal( uint256 id ) public noReentrancy
+        function stkUnstaking( uint256 id ) public noReentrancy
     ```  
         Parameters     
            
@@ -345,10 +345,10 @@ graph LR
         | id | 철회(회수)할 token id |
 
     - - -
-    * **stkWithdrawalEx**   
+    * **stkUnstakingEx**   
     token id와 무관하게 amount 만큼 철회(회수) 한다
     ``` java
-        function stkWithdrawalEx( uint256 amount ) public noReentrancy
+        function stkUnstakingEx( uint256 amount ) public noReentrancy
     ```  
         Parameters     
            
@@ -357,10 +357,10 @@ graph LR
         | amount | 철회(회수)할 수량 |
      
     - - -     
-    * **stkWithdrawalF**   
+    * **stkUnstakingF**   
     token id를 강제 회수 한다   
     ``` java
-        function stkWithdrawalF( uint256 id ) public noReentrancy
+        function stkUnstakingF( uint256 id ) public noReentrancy
     ```  
         Parameters     
            
@@ -379,6 +379,7 @@ graph LR
     ``` java
         function execStakingRewardDividens() public noReentrancy
     ```  
+
         !!! info
                 staker가 배당 받은 reward는 claim 하여야만 인출 된다   
         !!! warning 
@@ -390,6 +391,7 @@ graph LR
     ``` java
         function claimStakingReward() public noReentrancy 
     ```  
+
         !!! info
             배당 받은 reward는 다른 누군가의 caller가 mining 또는 execStakingRewardDividens을    
             호출 하여 적립된 수량이다
@@ -403,7 +405,7 @@ graph LR
 
     - - -
     * **stkDisable**   
-    staking을 못하게 막는다
+    staking을 불가능 하게 한다
     ``` java
         function stkDisable() public checkPermission( uint16( ENUMPERMISSIONS.DAO ) )
     ```  
