@@ -139,7 +139,7 @@ graph LR
         | uint256[] | unlock되어 있는 id 목록 |        
 
         !!! info
-            lock되어 있는 id는 withrawal을 수행 할 수 없다       
+            lock되어 있는 id는 Unstaking을 수행 할 수 없다       
 
     - - -
     * **stkInqueryStakingStatus**   
@@ -300,7 +300,7 @@ graph LR
         struct tConclusion {
             uint256         signedTime;     //계약체결 시간 ( 계약 적용 날짜 계약체결 시간 기준 명일 00:00:00)
             uint256         period;         //계약약정 기간 ( 일 단위 ), 0 이면 무약정 체결
-            bool            locked;         //true 이면 계약약정 기간 동안 철회(withdrawl) 할 수 없음
+            bool            locked;         //true 이면 계약약정 기간 동안 철회(Unstaking) 할 수 없음
             uint256         amount;         //erc20을 staking 할 경우 토큰 수량 또는 가중치
         }        
         ```
@@ -350,10 +350,10 @@ graph LR
         | locked | lock 여부 |   
 
     - - -
-    * **stkWithdrawal**   
+    * **stkUnstaking**   
     Staking을 철회 한다
     ``` java
-        function stkWithdrawal( uint256 id ) public noReentrancy
+        function stkUnstaking( uint256 id ) public noReentrancy
     ```  
         Parameters     
            
