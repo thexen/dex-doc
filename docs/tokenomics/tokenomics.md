@@ -53,15 +53,13 @@ staking을 하지 않고 NFT 마켓에 판매 할 경우 또 다른 가치 창�
 ## **디인플레이션 정책**
 유동성 풀에서 발생한 수수료 중 governor 몫의 Governance token 전체와 특정 구간의 강화 성공   
 인센티브로 지급 될 Governance token의 governor 몫(20%)과 개발사 몫(10%)을 펀드 형태로   
-조성됩니다. 조성된 Governance token은 DAO 안건 상정과 투표로 소각시켜 인플레이션을 둔화  
-시킬수 있도록 되어 있습니다   
+조성됩니다. 조성된 Governance token은 DAO의 투표로 소각 시킬 수 있습니다  
 
 | *Governance token 펀드 조성*      | 
 | :---------:  
 | 유동성 풀에서 발생한 수수료 중 governor 몫의 Governance token | 
 | LPT 강화 성공 인센티브 중 governor 몫(20%)과 개발팀 몫(10%)의 Governance token |
 | 안건 상정 비용 |
+| 강화 수수료 |  
 
-그리고 안건 상정 비용을 Governance token으로 지불하게 되어 있어 안건 상정 비용 또한 소각의   
-대상이 됩니다
 

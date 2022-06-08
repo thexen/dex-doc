@@ -172,7 +172,9 @@ graph LR
                     , address material
                     , uint256 limitAmount
                     , uint randSeed
-                    , address[] memory route ) 
+                    , address[] memory materialRoute
+                    , address[] memory feeRoute
+                    , uint256 stackId ) 
                 public returns( bool, uint )
     ```  
         Parameters     
@@ -183,7 +185,9 @@ graph LR
         | material   | 강화 재료로 사용 될 ERC20 token contract address | 
         | limitAmount | 강화 재료의 최대 수량 |
         | randSeed   | rand seed |
-        | route   | material의 상대 가치 측정을 위한 route( 목적지 -  bjects contract의 inqueryWorldCurrency() ) |         
+        | materialRoute   | material(재료)의 상대 가치 측정을 위한 route( 목적지 -  bjects contract의 inqueryWorldCurrency() ) |         
+        | feeRoute   | Governance token(수수료)의 상대 가치 측정을 위한 route( 목적지 -  bjects contract의 inqueryWorldCurrency() ) |    
+        |  stackId | 강화 stack NFT id( 0이면 강화 stack NFT를 사용 하지 않음) |   
 
         Returns     
 
@@ -200,6 +204,10 @@ graph LR
 
         !!! warning
             S,SS,SS 등급에서 강화하여 실패하면 등급이 1단계 하락된다
+
+        !!! warning
+            stackId 사용시 성공하면 강화 stack NFT는 소각 되며, 실패하면 stack 1이 증가 합니다   
+            1 stack 당 0.05%의 확률이 증가 합니다(200까지 누적 됩니다)            
     
 === "Events"
     1. Sed sagittis eleifend rutrum

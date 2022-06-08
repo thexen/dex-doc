@@ -34,13 +34,18 @@ j100Swap 생태계에 유동성 공급으로 받은 ERC721(NFT)화 된 LPT는 �
 NFT 마켓에서 거래 되고 있는 NFT들의 가치는 사고파는 사람들이 결정 하는 것이여서 실물 가치가   
 없지만 j100Swap 생태계의 LPT는 binding 된 pair token 수량 만큼 가치를 가지고 있으며 rarity를   
 부여하여 가치 상승을 유도하였습니다      
-rarity는 staking의 가중치에도 적용되어 riarity의 실용성에 관한 불신을 제거하였습니다      
+rarity는 staking의 가중치에도 적용되어 rarity의 실용성에 관한 불신을 제거하였습니다      
 
 LPT를 staking하게 되면 LPT의 가중치로 mining 수량이 결정 되는데 rarity가 상승 할 수록 가중치도  
 같이 상승하여 보다 많은 Governance token을 보상 받게 됩니다   
 
 LPT의 rairity 상승은 LPT 강화에 성공하여야만 하고 특정 구간은 강화 성공확률이 희박하게 설정되어   
 강화 실패시 rarity 하락도 하게 됩니다  
+
+강화 실패시 강화 stack NFT가 발행되며 발행된 NFT를 사용하여 강화 성공 확률을 올릴수 있습니다   
+강화 stack NFT를 이용하여 강화에 성공하면 사용한 강화 stack NFT는 소각되며 강화 실패시에는  
+해당 NFT에 강화 stack 1이 증가 합니다   
+
 
 ## **LPT ENHANCE**
 LPT 강화는 staking 상태에서 되지 않습니다
@@ -53,6 +58,11 @@ LPT 강화는 staking 상태에서 되지 않습니다
 | S | SS | A |
 | SS | SSS | S |
 | SSS | SSSP | SS |
+
+!!! warning "강화 stack"
+    강화 실패시 stack 1이 적립되며  stack 1 당 강화 성공 확률 0.05% 증가 합니다    
+    stack 200(성공 확률 10% 증가)까지 적립 할 수 있으며 해당 NFT로 강화에 성공하면 소각 됩니다    
+    강화 stack NFT는 NFT market에 판매가 가능합니다     
 
 
 강화 성공시 인센티브(강화보상) 구간    
@@ -86,6 +96,19 @@ LPT 강화는 staking 상태에서 되지 않습니다
 | A(3) | 300,000 |  300,000~400,000 | 15 | 13~17 | - |     
 | B(2) | 500,000 |  불가 | 12 | 불가 | -  |     
 | C(1) | 1,000,000 | 불가 | 10 | 불가 | - |     
+
+## **강화 재료 및 수수료**
+유동성 공급의 징표로 LPT를 받았다면 해당 LPT는 공급한 ERC20 token 두개와 binding 되게 됩니다    
+LPT에 binding 된 두 token 중 A(3) 등급으로만 재료로 사용이 가능하고, 수수료로 Governance token이    
+추가로 필요 합니다    
+
+
+| *추가 준비물*      | *token*  | *수량*  | 
+| :---------: | :--------------: | :-----------------: |
+| 재료(matrial) | ERC20 token A(3)등급 이상 | $1 가치의 수량 |
+| 수수료(fee) | Governance token |  $1 가치의 수량 |
+
+Governance token은 펀드로 조성되게 되어 있으며 소각 시킬 수 있습니다
 
 
 ## **j100Swap 생태계의 LPT 가치**
