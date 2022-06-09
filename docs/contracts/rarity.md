@@ -31,8 +31,17 @@ graph LR
     *checkPermission( uint16( ENUMPERMISSIONS.RARITY ) )*   
     - 
 
-=== "Inquery Functions(3)"
+=== "Inquery Functions(5)"
 
+    * **inqueryStack**   
+    강화 실패 누적 횟수를 조회 한다    
+    1 stack 당 0.05%의 추가 성공 확률이 있다       
+    ``` java
+        function inqueryStack( address caller ) 
+                        public view returns( uint8 )
+    ```   
+
+    - - - 
     * **inqueryProbabilityTable**   
     강화 테이블을 조회 한다
     ``` java
@@ -84,8 +93,7 @@ graph LR
     * **enhanceTest**   
     강화 테스트를 한다
     ``` java
-        function enhanceTest( address applicant
-                        , string memory rarity
+        function enhanceTest( string memory rarity
                         , uint256 randNonce ) 
                     public view returns( bool, uint )
     ```   
@@ -126,7 +134,7 @@ graph LR
     * **enhance**   
     강화를 한다
     ``` java
-        function enhance( string memory rarity, uint256 randNonce ) 
+        function enhance( address applicant, string memory rarity, uint256 randNonce ) 
                     public checkPermission( uint16( ENUMPERMISSIONS.RARITY ) ) 
                     returns( bool, uint, string memory )
     ```   
@@ -134,6 +142,7 @@ graph LR
            
         | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
+        | applicant | enhance() 호출자 |
         | rarity | 강화할려는 현재 등급 |
         | randNonce | 강화 seed 값 |
 

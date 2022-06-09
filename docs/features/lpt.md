@@ -42,9 +42,9 @@ LPT를 staking하게 되면 LPT의 가중치로 mining 수량이 결정 되는�
 LPT의 rairity 상승은 LPT 강화에 성공하여야만 하고 특정 구간은 강화 성공확률이 희박하게 설정되어   
 강화 실패시 rarity 하락도 하게 됩니다  
 
-강화 실패시 강화 stack NFT가 발행되며 발행된 NFT를 사용하여 강화 성공 확률을 올릴수 있습니다   
-강화 stack NFT를 이용하여 강화에 성공하면 사용한 강화 stack NFT는 소각되며 강화 실패시에는  
-해당 NFT에 강화 stack 1이 증가 합니다   
+강화 실패시 강화를 시도한 account에 실패 stack이 적립되고 1 stack 당 0.05%의 성공 확율이    
+증가하며 200까지 누적됩니다   
+강화에 성공하면 적립된 stack은 초기화 되어 0으로 됩니다   
 
 
 ## **LPT ENHANCE**

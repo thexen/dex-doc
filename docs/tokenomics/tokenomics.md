@@ -6,10 +6,9 @@ j100Swap은 타 DEX와 차별화 된 정책들이 몇 가지 있습니다
 유동성 확보 및 확보된 유동성 유지 방안에 대한 많은 고민을 하였습니다   
 
 ??? warning annotate "j100Swap의 차별화 된 정책"
-      - NFT화 된 LPT   
-      - LPT 강화    
-      - LPT 강화 성공 인센티브   
-      - Voting
+      - ERC721(NFT) LPT   
+      - LPT 강화와 인센티브 제도    
+      - 투표권 양도
 
       [:fontawesome-solid-link: TODO - LPT 및 강화 정책에 관한 자세한 내용 ](/features/lpt ){ .md-button } 
       [:fontawesome-solid-link: TODO - Voting 투표권에 관한 자세한 내용 ](/features/voting ){ .md-button } 
