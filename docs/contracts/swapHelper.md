@@ -87,7 +87,7 @@ graph LR
     
 === "Invoke Functions(2)"
 
-    * **registPermission**   
+    * **exchange**   
     ERC20 token 'from'의 fromAmount 수량으로 ERC20 token 'to'로 교환 한다  
     ``` java
         function exchange( address from
@@ -116,7 +116,7 @@ graph LR
         !!! info
             from이 address(0) 이면 coin(klay)을 to로 교환 하는 것이므로 fromAmount는 의미가 없다   
 
-    * **registPermission**   
+    * **exchange**   
     ERC20 token 'from'의 fromAmount 수량으로 ERC20 token 'to'로 교환 한다  
     ``` java
         function exchange( address from
