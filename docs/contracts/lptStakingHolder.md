@@ -59,20 +59,25 @@ graph LR
     caller가 수령 가능한 staking holder의 reward 상수를 조회 한다   
     조회된 상수 값으로 실시간 mining 수치를 계산 할 수 있다   
     ``` java
-        function inqueryStakingRewardConst() 
-                    public view returns( uint256 reserves
-                                    , uint256 invokedLastTime
-                                    , uint8 weight
-                                    , uint256 totalWeight ) 
-    ```   
+        function inqueryStakingRewardConst() public view returns( uint256 reserves
+                                                                , uint256 startYears
+                                                                , uint256 invokedLastTime
+                                                                , uint256 weight
+                                                                , uint256 totalWeight
+                                                                , uint8   holderWeight
+                                                                , uint256 holderTotalWeight ) 
+            ```   
         Returns     
 
         | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
         | reserves | staking holder에 caller분량의 적립된 수량 |
+        | startYears | 채굴 시작 년도 |    
         | invokedLastTime | 마지막으로 mining을 호출 한 시간 |
-        | weight | swap pool의 가중치 |
-        | totalWeight | B등급 이상으로 binding 된 swap pool들의 가중치 합계 |
+        | weight | caller의 staking 가중치 |
+        | totalWeight | holder에 staking 된 전체 가중치 |
+        | holderWeight | swap pool의 가중치 |
+        | holderTotalWeight | B등급 이상으로 binding 된 swap pool들의 가중치 합계 |        
 
     - - -
     * **stkInqueryStakingTotalWeight**   

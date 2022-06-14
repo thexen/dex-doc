@@ -70,6 +70,7 @@ graph LR
         
         | *Return*    | *Description*                          |
         | :--------- | :------------------------------------ |
+        | uint256 | mining이 시작 된 년도 |    
         | uint256 | 가장 최근에 invokeMining() function이 호출 된 시간 |    
         | uint8 | swap pool 가중치 |    
         | uint256 | swap pool 들의 전체 가중치 |    
