@@ -117,6 +117,34 @@ graph LR
         | address | swap pool contract address |
 
     - - -    
+    * **inqueryPagingSwapPool**   
+    index로 swap pool을 조회 한다
+    ``` java
+        function inquerySwapPool(uint256 idx, uint256 count) 
+                    public view returns (TPageSP[] memory)
+    ```  
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | idx   | swap pool index |
+        | count   | 페이지당 swap pool 갯수( 1~20 ) |        
+
+        Returns     
+
+        | *Return*    | *Description*                          |
+        | :--------- | :------------------------------------ |
+        | TPageSP[] | swap pool과 dependency contract 들 |
+
+        ``` java
+        struct TPageSP {
+            address     sp;         //swap pool contract address
+            address     holder;     //staking holder contract address
+            address     lpt;        //lpt contract address
+        }
+        ```  
+
+    - - -    
     * **inquerySwapPool**   
     LPT staking holder로 swap pool을 조회 한다
     ``` java
