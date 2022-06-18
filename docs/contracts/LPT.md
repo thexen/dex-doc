@@ -204,8 +204,22 @@ graph LR
         !!! warning
             S,SS,SS 등급에서 강화하여 실패하면 등급이 1단계 하락된다
     
-=== "Events"
-    1. Sed sagittis eleifend rutrum
-    2. Donec vitae suscipit est
-    3. Nulla tempor lobortis orci
+=== "Events(1)"
 
+
+    * **Enhance**   
+    강화 결과 이벤트
+    ``` java
+        event Enhance( address sender
+                    , string currentRarity
+                    , uint rand );
+
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | sender   | Enhance 호출한 address  |
+        | currentRarity   | 강화 전 등급 |   
+        | rand | 강화 결과 수치 |   

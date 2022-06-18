@@ -441,8 +441,78 @@ graph LR
         | amount   | 송금 할 수량 |   
 
     
-=== "Events"
-    1. Sed sagittis eleifend rutrum
-    2. Donec vitae suscipit est
-    3. Nulla tempor lobortis orci
+=== "Events(5)"
 
+    * **TransferRewardTo**   
+    staking 보상 이벤트
+    ``` java
+        event TransferRewardTo( address to );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | to   | 보상 받은 staker address  |
+
+    - - -
+    * **Staking**   
+    staking 이벤트
+    ``` java
+        event Staking( address sender
+                    , uint256 id
+                    , uint256 amount
+                    , uint256 period );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | sender  | staker address  |
+        | id  | token id  |
+        | amount  | staking 수량 |        
+        | period  | staking 기간(days)  |        
+
+    - - -
+    * **Unstaking**   
+    unstaking 이벤트
+    ``` java
+        event Unstaking( address sender
+                    , uint256 id
+                    , uint256 amount );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | sender  | staker address  |
+        | id  | token id  |
+        | amount  | unstaking 수량 |        
+
+    - - -
+    * **Burn**   
+    Burn 이벤트
+    ``` java
+        event Burn( uint256 amount ); 
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | amount  | Burn 수량 |      
+
+    - - -
+    * **Recycle**   
+    Recycle 이벤트
+    ``` java
+        event Recycle( uint256 amount ); 
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | amount  | Recycle 수량 |              

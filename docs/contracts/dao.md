@@ -250,8 +250,28 @@ graph LR
         | cmd | 0 : brun, 1 : recycle |   
         | amount | 소각 또는 재활용 수량 |   
 
-=== "Events"
-    1. Sed sagittis eleifend rutrum
-    2. Donec vitae suscipit est
-    3. Nulla tempor lobortis orci
+=== "Events(1)"
 
+    
+
+    * **Proposal**   
+    안건 상정 이벤트
+    ``` java
+        event Proposal( address sender
+                    , uint256 agendaId
+                    , bytes callData
+                    , uint256 deadline );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | sender   | 안건을 상정한 address  |
+        | agendaId   | 안건 Id |   
+        | callData | 안건 내용 |   
+        | deadline | 투표 만료일  |   
+
+        !!! note
+            agendaId 으로 Voting contract address 조회가 가능하다  
+            inqueryVoting() 사용    

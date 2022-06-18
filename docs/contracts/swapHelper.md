@@ -24,8 +24,6 @@ graph LR
 
 ## **Events & Functions**
 
-> onlyCreator - contract를 생성 한 account(contract) 만 호출 가능, Permission contract는 Objects contract에서 생성 됨        
-
 === "Inquery Functions(2)"
 
     * **inqueryRelativeValue**   
@@ -150,8 +148,27 @@ graph LR
             slippage는 교환된 to 수량이  ( expectedAmount - (expectedAmount * slippage / 100) )   
             보다 커야 거래가 진행된다
 
-=== "Events"
-    1. Sed sagittis eleifend rutrum
-    2. Donec vitae suscipit est
-    3. Nulla tempor lobortis orci
+=== "Events(1)"
+
+    * **Exchange**   
+    token 교환 이벤트
+    ``` java
+        event Exchange( address caller
+                    , address from
+                    , uint256 fromAmount
+                    , address to
+                    , uint256 minimumQuantity
+                    , uint256 receiptAmount );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | caller   | Exchange 호출한 address  |
+        | from   | from ERC20 token contract address |   
+        | fromAmount | 교환 할 수량 |   
+        | to | to ERC20 token contract address |   
+        | minimumQuantity | 슬리피지가 적용된 교환가능한 최소 수량 |                   
+        | receiptAmount | 교환된 수량 |   
 

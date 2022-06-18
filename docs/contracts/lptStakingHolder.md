@@ -59,14 +59,15 @@ graph LR
     caller가 수령 가능한 staking holder의 reward 상수를 조회 한다   
     조회된 상수 값으로 실시간 mining 수치를 계산 할 수 있다   
     ``` java
-        function inqueryStakingRewardConst() public view returns( uint256 reserves
-                                                                , uint256 startYears
-                                                                , uint256 invokedLastTime
-                                                                , uint256 weight
-                                                                , uint256 totalWeight
-                                                                , uint8   holderWeight
-                                                                , uint256 holderTotalWeight ) 
-            ```   
+        function inqueryStakingRewardConst() 
+                    public view returns( uint256 reserves
+                                        , uint256 startYears
+                                        , uint256 invokedLastTime
+                                        , uint256 weight
+                                        , uint256 totalWeight
+                                        , uint8   holderWeight
+                                        , uint256 holderTotalWeight ) 
+    ```   
         Returns     
 
         | *Return*    | *Description*                          |
@@ -418,8 +419,74 @@ graph LR
 
 
 
-=== "Events"
-    1. Sed sagittis eleifend rutrum
-    2. Donec vitae suscipit est
-    3. Nulla tempor lobortis orci
+=== "Events(5)"
 
+    * **TransferRewardTo**   
+    staking 보상 이벤트
+    ``` java
+        event TransferRewardTo( address to ); 
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | to   | 보상 받은 staker address  |
+     
+    - - -     
+    * **Staking**   
+    staking 이벤트
+    ``` java
+        event Staking( address sender, uint256 id, uint256 period );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | sender  | staker address  |
+        | id  | token id  |
+        | period  | staking 기간(days)  |        
+
+    - - -
+    * **StakingEx**   
+    StakingEx 이벤트
+    ``` java
+        event StakingEx( address sender, uint256 amount, uint256 period );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | sender  | staker address  |
+        | amount  | staking 수량  |
+        | period  | staking 기간(days)  |                
+
+    - - -
+    * **Unstaking**   
+    Unstaking 이벤트
+    ``` java
+        event Unstaking( address sender,uint256 id );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | sender  | staker address  |
+        | id  | token id  |
+
+    - - -
+    * **UnstakingEx**   
+    UnstakingEx 이벤트
+    ``` java
+        event UnstakingEx( address sender,uint256 id );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | sender  | staker address  |
+        | amount  | unstaking 할 수량  |

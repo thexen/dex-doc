@@ -158,8 +158,21 @@ graph LR
         | `token`   | ERC20 token contract address |
 
 
-=== "Events"
-    1. Sed sagittis eleifend rutrum
-    2. Donec vitae suscipit est
-    3. Nulla tempor lobortis orci
+=== "Events(1)"
 
+    * **SetToken**   
+    ERC20 token 등록 이벤트
+    ``` java
+        event SetToken( address token
+                    , uint256 expireDate
+                    , uint8 weight );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | token   | ERC20 token contract adress  |
+        | expireDate | mining 라이선트 만료 날짜 |   
+        | weight | 등급(가중치) |   
+        

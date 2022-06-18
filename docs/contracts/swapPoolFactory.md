@@ -88,8 +88,26 @@ graph LR
         | :--------- | :------------------------------------ |
         | address | 생성된 swap pool contract address |        
 
-=== "Events"
-    1. Sed sagittis eleifend rutrum
-    2. Donec vitae suscipit est
-    3. Nulla tempor lobortis orci
+=== "Events(1)"
 
+    * **CreateSwapPool**   
+    Swap Pool 생성 이벤트
+    ``` java
+        event CreateSwapPool( address firstToken
+                        , address secondToken
+                        , address sp
+                        , address holder
+                        , address lpt
+                        , uint256 fee );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | firstToken   | binding 된 ERC20 token contract adress  |
+        | secondToken   | binding 된 ERC20 token contract adress|   
+        | sp | 생성된 swap pool contract address |   
+        | holder | 생성된 staking holder contract address |   
+        | lpt | 생성된 LPT contract address |                   
+        | fee | swap 수수료 |   
