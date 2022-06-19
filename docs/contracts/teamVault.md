@@ -299,8 +299,72 @@ graph LR
         !!! info
             기안 작성 일로 부터 3일 이내에 승인 되어야 하고 집행 되어야 한다  
     
-=== "Events"
-    1. Sed sagittis eleifend rutrum
-    2. Donec vitae suscipit est
-    3. Nulla tempor lobortis orci
+=== "Events(5)"
 
+    * **AddMember**   
+    구성원 추가 이벤트
+    ``` java
+        event AddMember( address newMember );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | newMember   | 새로운 구성원 adress  |
+        
+    - - -        
+    * **RemoveMember**   
+    구성원 삭제 이벤트
+    ``` java
+        event RemoveMember( address member );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | member   | 제외 된 구성원 adress  |    
+
+    - - -                
+    * **Proposal**   
+    결재 제안 이벤트
+    ``` java
+        event Proposal( address drafter, uint256 docId, bytes callData );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | drafter   | 결재 작성자  |       
+        | docId   | 결재 문서 Id  |               
+        | callData   | 결재 처리 내용  |                       
+
+    - - -                
+    * **Approval**   
+    제안된 결재 승인 이벤트
+    ``` java
+        event Approval( address approvor, uint256 docId );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | approvor   | 결재 승인자  |       
+        | docId   | 결재 문서 Id  |               
+
+    - - -                
+    * **Invoke**   
+    승인된 결재 집행 이벤트
+    ``` java
+        event Invoke( address sender, uint256 docId );
+    ```  
+
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | approvor   | 결재 처리 호출 자 |       
+        | docId   | 결재 문서 Id  |       
