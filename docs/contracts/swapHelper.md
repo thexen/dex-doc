@@ -153,7 +153,7 @@ graph LR
     * **Exchange**   
     token 교환 이벤트
     ``` java
-        event Exchange( address caller
+        event Exchange( address sender
                     , address from
                     , uint256 fromAmount
                     , address to
@@ -165,7 +165,7 @@ graph LR
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
-        | caller   | Exchange 호출한 address  |
+        | sender   | Exchange 호출한 address  |
         | from   | from ERC20 token contract address |   
         | fromAmount | 교환 할 수량 |   
         | to | to ERC20 token contract address |   
