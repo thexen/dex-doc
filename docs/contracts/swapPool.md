@@ -499,19 +499,21 @@ graph LR
     * **Swap**   
     교환 이벤트 
     ``` java
-        event Swap( address sender
-                , address token
-                , uint256 amount
-                , uint256 receiptAmount
-                , uint256 fee );
+        event Statistics( uint256 firstBalance
+                    , uint256 secondBalance
+                    , uint256 firstTradingVolume
+                    , uint256 secondTradingVolume
+                    , uint256 firstFee
+                    , uint256 secondFee );
     ```  
 
         Parameters     
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
-        | sender   | 호출자  |
-        | token | 교환할 token|
-        | amount   | 교환할 token 수량 |   
-        | receiptAmount | 교환하여 획득한 token 수량 |           
-        | fee | 교환에 사용된 수수료 |           
+        | firstBalance   | 예치된 first token 수량   |
+        | secondBalance | 예치된 second token 수량 |
+        | firstTradingVolume   | first token 누적 거래량 |   
+        | secondTradingVolume | second token 누적 거래량 |           
+        | firstFee | first token 누적 수수료 |           
+        | secondFee | second token 누적 수수료 |           

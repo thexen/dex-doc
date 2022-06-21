@@ -31,7 +31,7 @@ graph LR
     *onlyCreator*   
     - contract를 생성 한 account(contract) 만 호출 가능
 
-=== "Inquery Functions(14)"
+=== "Inquery Functions(13)"
 
     * **inqueryTotalValidWeight**   
     swap pool의 유효한 전체 가중치 합계를 조회 한다   
@@ -300,45 +300,7 @@ graph LR
         | :--------- | :------------------------------------ |
         | address | LPT staking holder contract address |
 
-    - - -    
-    * **inqueryDailyStat**   
-    swap pool의 기간별 거래량 및 수수료 수익을 조회 한다
-    ``` java
-        function inqueryDailyStat( address swapPool
-                                , uint256 startDate
-                                , uint256 period ) 
-                            public view returns ( TDailyStat[] memory ) 
-    ```  
-        Parameters     
-           
-        | *Param*        | Description                          |
-        | :----------- | :------------------------------------ |
-        | swapPool   | swap pool contract address |
-        | startDate   | 날짜 |
-        | period   | 기간(days 단위로 입력) |
-
-        Returns     
-
-        | *Return*    | Description                          |
-        | :--------- | :------------------------------------ |
-        | TDailyStat | 일별 거거랭 및 수수료 수익 |
-
-        ``` C++
-        struct TDailyStat {
-            uint256             date;
-            TStatistics         stat;
-        }
-        struct TStatistics {
-            TUINT256Pair        tradingVolume;
-            TUINT256Pair        feeIncome; 
-        }
-        ```
-
-        !!! info
-            swap pool의 binding pair token contract address 는    
-            swap pool contract의 inqueryPariToken() function으로 조회 할 수 있다   
-
-=== "Invoke Functions(7)"
+=== "Invoke Functions(6)"
 
     * **regist**   
     swap pool을 등록 한다   
@@ -428,20 +390,6 @@ graph LR
         | swapPool   | swap pool contract address |
         | accumulation   | 배당률(400,0000,000(40%)~600,000,000(60%), 단위 1/1,000,000,000)|
 
-    - - -    
-    * **invokeDailyStat**   
-    swap 거래량 및 수수료 수익을 일단위로 기록 한다
-    ``` java
-        function invokeDailyStat( ENUMPAIR fromEnumToken, uint256 tradingAmount, uint256 feeIncome ) public 
-    ```  
-        Parameters     
-           
-        | *Param*        | *Description*                          |
-        | :----------- | :------------------------------------ |
-        | fromEnumToken*   | binding 된 pair token( first(0) 또는 second(1) ) |
-        | tradingAmount   | 거래량 |
-        | feeIncome   | 수수료 수익 |
-   
     
 === "Events"
     1. Sed sagittis eleifend rutrum
