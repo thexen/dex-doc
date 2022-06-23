@@ -499,8 +499,7 @@ graph LR
     * **Swap**   
     교환 이벤트 
     ``` java
-        event Statistics( address indexed objects
-                    , uint256 firstBalance
+        event Statistics( uint256 firstBalance
                     , uint256 secondBalance
                     , uint256 firstTradingVolume
                     , uint256 secondTradingVolume
@@ -512,7 +511,6 @@ graph LR
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
-        | objects | objects contract address   |
         | firstBalance   | 예치된 first token 수량   |
         | secondBalance | 예치된 second token 수량 |
         | firstTradingVolume   | first token 누적 거래량 |   
