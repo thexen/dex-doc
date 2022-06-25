@@ -185,8 +185,15 @@ graph LR
     * **proposalJoin**   
     Team wallet에 가입 신청을 한다
     ``` java
-        function proposalJoin() public noReentrancy returns( uint256 )
+        function proposalJoin( address newMember ) public onlyMember noReentrancy returns( uint256 ) 
     ```   
+
+        Parameters     
+           
+        | *Param*      | *Description*                          |
+        | :--------- | :------------------------------------ |
+        | newMember | new member address |
+
         Returns     
 
         | *Return*    | *Description*                          |
@@ -235,29 +242,6 @@ graph LR
         !!! info
             invokeByDraftDocId function을 호출하여 안건을 처리하면      
             function withdrawal( address to ) public onlySelf이 호출된다
-
-    - - -
-    * **proposalWithdrawal**   
-    Team wallet이 소유한 특정 자산의 모든 총액 인출을 신청한다
-    ``` java
-        function proposalWithdrawal( address token ) 
-                    public onlyMember noReentrancy returns( uint256 )
-    ```   
-        Parameters     
-           
-        | *Param*      | *Description*                          |
-        | :--------- | :------------------------------------ |
-        | token | 인출을 신청할 token contract address |
-        
-        Returns     
-
-        | *Return*    | *Description*                          |
-        | :--------- | :------------------------------------ |
-        | uint256 | 안건 문서 Id |
-
-        !!! info
-            invokeByDraftDocId function을 호출하여 안건을 처리하면      
-            function withdrawal( address token, address to ) public onlySelf이 호출된다
 
     - - -
     * **proposalWithdrawal**   

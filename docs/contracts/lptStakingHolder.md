@@ -308,7 +308,7 @@ graph LR
     * **stkStaking**   
     token id 별로 staking 한다
     ``` java
-        function stkStaking( uint256 id
+        function stkStaking( uint256[] memory ids
                         , uint256 period
                         , bool locked ) 
                     public noReentrancy
@@ -317,7 +317,7 @@ graph LR
            
         | *Param*      | *Description*                          |
         | :--------- | :------------------------------------ |
-        | id | token id |
+        | ids | token id 목록 |
         | period | staking 기간 |
         | locked | lock 여부 |                
 
@@ -342,13 +342,13 @@ graph LR
     * **stkUnstaking**   
     staking을 철회(회수) 한다
     ``` java
-        function stkUnstaking( uint256 id ) public noReentrancy
+        function stkUnstaking( uint256[] memory ids ) public noReentrancy
     ```  
         Parameters     
            
         | *Param*     | *Description*                          |
         | :--------- | :------------------------------------ |
-        | id | 철회(회수)할 token id |
+        | ids | 철회(회수)할 token id 목록 |
 
     - - -
     * **stkUnstakingEx**   
@@ -419,7 +419,7 @@ graph LR
 
 
 
-=== "Events(5)"
+=== "Events(3)"
 
     * **TransferRewardTo**   
     staking 보상 이벤트
@@ -433,26 +433,11 @@ graph LR
         | :----------- | :------------------------------------ |
         | to   | 보상 받은 staker address  |
      
-    - - -     
-    * **Staking**   
-    staking 이벤트
-    ``` java
-        event Staking( address sender, uint256 id, uint256 period );
-    ```  
-
-        Parameters     
-           
-        | *Param*        | *Description*                          |
-        | :----------- | :------------------------------------ |
-        | sender  | staker address  |
-        | id  | token id  |
-        | period  | staking 기간(days)  |        
-
     - - -
-    * **StakingEx**   
-    StakingEx 이벤트
+    * **Staking**   
+    Staking 이벤트
     ``` java
-        event StakingEx( address sender, uint256 amount, uint256 period );
+        event Staking( address sender, uint256 amount, uint256 period );
     ```  
 
         Parameters     
@@ -467,21 +452,7 @@ graph LR
     * **Unstaking**   
     Unstaking 이벤트
     ``` java
-        event Unstaking( address sender,uint256 id );
-    ```  
-
-        Parameters     
-           
-        | *Param*        | *Description*                          |
-        | :----------- | :------------------------------------ |
-        | sender  | staker address  |
-        | id  | token id  |
-
-    - - -
-    * **UnstakingEx**   
-    UnstakingEx 이벤트
-    ``` java
-        event UnstakingEx( address sender,uint256 id );
+        event Unstaking( address sender, uint256 amount );
     ```  
 
         Parameters     
