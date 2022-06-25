@@ -462,25 +462,6 @@ graph LR
     예치 자산 회수 이벤트
     ``` java
         event Withdrawal( address sender
-                    , uint256 tokenId
-                    , uint256 firstAmount
-                    , uint256 secondAmount );
-    ```  
-
-        Parameters     
-           
-        | *Param*        | *Description*                          |
-        | :----------- | :------------------------------------ |
-        | sender   | 호출자  |
-        | tokenId | 회수에 사용할 LPT tokenId|
-        | firstAmount   | 회수된 first token 수량 |   
-        | secondAmount | 회수된 second token  수량 |   
-
-    - - - 
-    * **WithdrawalEx**   
-    예치 자산 회수 이벤트
-    ``` java
-        event WithdrawalEx( address sender
                     , uint256 lptAmount
                     , uint256 firstAmount
                     , uint256 secondAmount );
@@ -496,11 +477,10 @@ graph LR
         | secondAmount | 회수된 second token  수량 |   
 
     - - - 
-    * **Swap**   
+    * **Statistics**   
     교환 이벤트 
     ``` java
-        event Statistics( address indexed objects
-                    , uint256 firstBalance
+        event Statistics( uint256 firstBalance
                     , uint256 secondBalance
                     , uint256 firstTradingVolume
                     , uint256 secondTradingVolume
@@ -512,7 +492,6 @@ graph LR
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
-        | objects | objects contract address   |
         | firstBalance   | 예치된 first token 수량   |
         | secondBalance | 예치된 second token 수량 |
         | firstTradingVolume   | first token 누적 거래량 |   
