@@ -88,7 +88,7 @@ graph LR
 
 
     
-=== "Invoke Functions(6)"
+=== "Invoke Functions(5)"
 
     * **mint**   
     LPT를 amount 만큼 발행 한다
@@ -101,23 +101,6 @@ graph LR
         | :----------- | :------------------------------------ |
         | to   | tokenId owner address |
         | amount   | 발행 갯수 |   
-
-    - - - 
-    * **mint**   
-    metadata 경로와 함께 LPT를 amount 만큼 발행 한다
-    ``` java
-        function mint( address to
-                    , uint256 amount
-                    , string memory tokenUri ) 
-                public onlyOwner
-    ```  
-        Parameters     
-           
-        | *Param*        | *Description*                          |
-        | :----------- | :------------------------------------ |
-        | to   | tokenId owner address |
-        | amount   | 발행 갯수 |   
-        | tokenUri   | sub metadata 경로( /rarity/metadata.json ) |   
 
     - - - 
     * **burn**   

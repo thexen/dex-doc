@@ -300,7 +300,7 @@ graph LR
         | :--------- | :------------------------------------ |
         | address | LPT staking holder contract address |
 
-=== "Invoke Functions(6)"
+=== "Invoke Functions(5)"
 
     * **regist**   
     swap pool을 등록 한다   
@@ -319,19 +319,6 @@ graph LR
         | lpt   | swap pool의 LPT |
         | fee   | swap pool의 swap 수수료 |        
         | accumulation   | swap pool의 수수료의 일부 중 Governance 배당 비율( default: 500,000,000(50%) ) |        
-
-    - - -
-    * **unregist**   
-    swap pool 등록을 말소 한다   
-    ``` java
-        function unregist(address swapPool) 
-                    public checkPermission( uint16( ENUMPERMISSIONS.FACTORY ) )
-    ```  
-        Parameters     
-           
-        | *Param*        | *Description*                          |
-        | :----------- | :------------------------------------ |
-        | swapPool   | swap pool contract address |
 
     - - -
     * **registLPTStakingHolder**   
