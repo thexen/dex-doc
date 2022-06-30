@@ -345,13 +345,13 @@ graph LR
     예치한 자산을 회수 한다  
     inqueryAssetFromWithdrawal() function으로 회수 시 수령하게 될 자산의 예상치를 조회 할 수 있다
     ``` java
-        function withdrawal( uint256 tokenId ) public noReentrancy
+        function withdrawal( uint256[] tokenIds ) public noReentrancy
     ```  
         Parameters     
            
         | *Parameter*        | *Description*                          |
         | :----------- | :------------------------------------ |
-        | tokenId   | 회수 할 LPT 갯 수 |
+        | tokenIds   | 회수 할 LPT 토큰 목록|
         
     - - - 
     * **withdrawalEx**   
