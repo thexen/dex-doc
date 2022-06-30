@@ -163,7 +163,8 @@ graph LR
     * **SetToken**   
     ERC20 token 등록 이벤트
     ``` java
-        event SetToken( address token
+        event SetToken( uint256 index
+                    , address token
                     , uint256 expireDate
                     , uint8 weight );
     ```  
@@ -172,6 +173,7 @@ graph LR
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
+        | index   | token index  |
         | token   | ERC20 token contract adress  |
         | expireDate | mining 라이선트 만료 날짜 |   
         | weight | 등급(가중치) |   

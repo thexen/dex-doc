@@ -93,7 +93,8 @@ graph LR
     * **CreateSwapPool**   
     Swap Pool 생성 이벤트
     ``` java
-        event CreateSwapPool( address firstToken
+        event CreateSwapPool( uint256 index
+                        , address firstToken
                         , address secondToken
                         , address sp
                         , address holder
@@ -105,6 +106,7 @@ graph LR
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
+        | index   | swap pool index  |
         | firstToken   | binding 된 ERC20 token contract adress  |
         | secondToken   | binding 된 ERC20 token contract adress|   
         | sp | 생성된 swap pool contract address |   
