@@ -193,7 +193,8 @@ graph LR
     * **Enhance**   
     강화 결과 이벤트
     ``` java
-        event Enhance( address sender
+        event Enhance( address indexed objects 
+                    , address sender
                     , string currentRarity
                     , uint rand );
 
@@ -203,6 +204,7 @@ graph LR
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
+        | object | objects contract address |
         | sender   | Enhance 호출한 address  |
         | currentRarity   | 강화 전 등급 |   
         | rand | 강화 결과 수치 |   

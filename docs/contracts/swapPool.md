@@ -416,12 +416,13 @@ graph LR
             LPT의 staking holder의 staking 기능을 중지 시켜야 한다   
 
 
-=== "Events(5)"
+=== "Events(4)"
 
     * **Founding**   
     Swap Pool이 생성된 후 첫 예치시 발생하는 이벤트
     ``` java
-        event Founding( address sender
+        event Founding( address indexed object
+                    , address sender
                     , uint256 firstAmount
                     , uint256 secondAmount
                     , uint256 lptAmount );
@@ -431,6 +432,7 @@ graph LR
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
+        | object | objects contract address |
         | sender   | 호출자  |
         | firstAmount   | first token 수량 |   
         | secondAmount | second token  수량 |   
@@ -440,7 +442,8 @@ graph LR
     * **Deposit**   
     유동성 예치 이벤트
     ``` java
-        Deposit( address sender
+        Deposit( address indexed object
+                , address sender
                 , uint256 firstAmount
                 , uint256 returnFirst
                 , uint256 secondAmount
@@ -451,6 +454,7 @@ graph LR
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
+        | object | objects contract address |
         | sender   | 호출자  |
         | firstAmount   | first token 수량 |   
         | returnFirst   | 반환된 first token 수량 |  
@@ -461,7 +465,8 @@ graph LR
     * **Withdrawal**   
     예치 자산 회수 이벤트
     ``` java
-        event Withdrawal( address sender
+        event Withdrawal( address indexed object
+                    , address sender
                     , uint256 lptAmount
                     , uint256 firstAmount
                     , uint256 secondAmount );
@@ -471,6 +476,7 @@ graph LR
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
+        | object | objects contract address |
         | sender   | 호출자  |
         | lptAmount | 회수에 사용할 LPT 수량|
         | firstAmount   | 회수된 first token 수량 |   
@@ -480,7 +486,8 @@ graph LR
     * **Statistics**   
     교환 이벤트 
     ``` java
-        event Statistics( uint256 firstBalance
+        event Statistics( address indexed object
+                    , uint256 firstBalance
                     , uint256 secondBalance
                     , uint256 firstTradingVolume
                     , uint256 secondTradingVolume
@@ -492,6 +499,7 @@ graph LR
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
+        | object | objects contract address |
         | firstBalance   | 예치된 first token 수량   |
         | secondBalance | 예치된 second token 수량 |
         | firstTradingVolume   | first token 누적 거래량 |   
