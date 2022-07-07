@@ -119,19 +119,40 @@ graph LR
          function withdrawal() public onlyProposer
     ```      
     
-=== "Events(1)"
+=== "Events(2)"
 
-   
+    * **Invoke**   
+    투표 이벤트
+    ``` java
+    
+        event Voting( address indexed object, address voter
+                                        , uint256 agree, uint256 disagree
+                                        , uint256 totalAgree, uint256 totalDisagree
+                                        , uint256 totalSupply );
 
+        Parameters     
+           
+        | *Param*        | *Description*                          |
+        | :----------- | :------------------------------------ |
+        | object   | Objects contract address  |
+        | voter   | 투표자  |
+        | agree   | 투표자가 찬성한 수 |
+        | disagree   | 투표자가 반대한 수  |
+        | totalAgree   | 전체 찬성 수  |
+        | totalDisagree   | 전체 반대 수  |
+        | totalSupply   | 투표권 수 |
+
+    - - -
     * **Invoke**   
     가결된 안건 처리 이벤트
     ``` java
-        event Invoke( bytes callData );
+        event Invoke( address indexed object, bytes callData );
     ```  
 
         Parameters     
            
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
+        | object   | Objects contract address  |
         | callData   | 안건 처리 내용  |
 
