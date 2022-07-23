@@ -312,6 +312,7 @@ graph LR
             coin(klay) 와 binding pair token으로 swap pool을 생성한 경우 secondAmount는 의미가 없다        
             예치 할 수 있는 pair token의 수량을 inqueryRequiredPairAsset()으로 조회 할 수 있고   
             예치 후 수령 가능한 LPT 수를 inqueryReceiptableLPT721()으로 확인 할 수 있다   
+            second가 coin(klay) 라면 secondAmount는 '0.0001 ether' 이상 이어야 한다
 
     - - -    
 
@@ -422,7 +423,6 @@ graph LR
     Swap Pool이 생성된 후 첫 예치시 발생하는 이벤트
     ``` java
         event Founding( address indexed object
-                    , address sender
                     , uint256 firstAmount
                     , uint256 secondAmount
                     , uint256 lptAmount );
@@ -433,7 +433,6 @@ graph LR
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | object | objects contract address |
-        | sender   | 호출자  |
         | firstAmount   | first token 수량 |   
         | secondAmount | second token  수량 |   
         | lptAmount | firstAmount와 secondAmount 비율로 생성할 lpt 수량|   
@@ -443,11 +442,11 @@ graph LR
     유동성 예치 이벤트
     ``` java
         Deposit( address indexed object
-                , address sender
                 , uint256 firstAmount
                 , uint256 returnFirst
                 , uint256 secondAmount
-                , uint256 returnSecond );
+                , uint256 returnSecond
+                , uint256 totalLPTSupply );
     ```  
 
         Parameters     
@@ -455,21 +454,21 @@ graph LR
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | object | objects contract address |
-        | sender   | 호출자  |
         | firstAmount   | first token 수량 |   
         | returnFirst   | 반환된 first token 수량 |  
         | secondAmount | second token  수량 |   
         | returnSecond | 반환된 second token 수량 |     
+        | totalLPTSupply | LPT totalSupply |     
 
     - - - 
     * **Withdrawal**   
     예치 자산 회수 이벤트
     ``` java
         event Withdrawal( address indexed object
-                    , address sender
                     , uint256 lptAmount
                     , uint256 firstAmount
-                    , uint256 secondAmount );
+                    , uint256 secondAmount
+                    , uint256 totalLPTSupply );                    
     ```  
 
         Parameters     
@@ -477,11 +476,10 @@ graph LR
         | *Param*        | *Description*                          |
         | :----------- | :------------------------------------ |
         | object | objects contract address |
-        | sender   | 호출자  |
         | lptAmount | 회수에 사용할 LPT 수량|
         | firstAmount   | 회수된 first token 수량 |   
         | secondAmount | 회수된 second token  수량 |   
-
+        | totalLPTSupply | LPT totalSupply |     
     - - - 
     * **Statistics**   
     교환 이벤트 
