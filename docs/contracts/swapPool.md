@@ -42,7 +42,7 @@ graph LR
     *checkPermission( uint16( ENUMPERMISSIONS.DAO ) )*
      -    
 
-=== "Inquery Functions(12)"
+=== "Inquery Functions(9)"
 
     * **inqueryPoolInfo**   
     swap pool의 현재 정보를 조회 한다
@@ -104,53 +104,7 @@ graph LR
         | :--------- | :------------------------------------ |
         | uint256 | first token 수량 |
         | uint256 | second token 수량 |
-
-    - - - 
-    * **inqueryRequiredPairAsset**   
-    예치를 위한 pair token의 수량을 조회 한다   
-    fromEnumToken(0또는1)의 amount 에 해당 되는 pair token의 수량을 조회 할 수 있다   
-    ``` java
-        function inqueryRequiredPairAsset( ENUMPAIR fromEnumToken
-                                        , uint256 amount ) 
-                                    public view returns( uint256, uint256 )
-    ```   
-        Parameters     
-
-        | *Parameter*    | *Description*                          |
-        | :--------- | :------------------------------------ |
-        | fromEnumToken | binding pair token(0또는1)|
-        | amount | fromEnumToken의 수량 |
-
-        Returns     
-
-        | *Return*    | *Description*                          |
-        | :--------- | :------------------------------------ |
-        | uint256 | fromEnumToken와 bindin 되어 있는 pair token의 수량 |
-        | uint256 | 예치시 반환 될 fromEnumToken의 수량 |
-
-    - - - 
-    * **inqueryReceiptableLPT721**   
-    예치를 할 경우 수령 가능한 LPT 수를 조회 한다 
-    ``` java
-        function inqueryReceiptableLPT721( uint256 firstAmount
-                                    , uint256 secondAmount ) 
-                                public view returns( uint256, uint256, uint256 )
-    ```   
-        Parameters     
-
-        | *Parameter*    | *Description*                          |
-        | :--------- | :------------------------------------ |
-        | firstAmount | first token 수량 |
-        | secondAmount | second token 수량 |
-
-        Returns     
-
-        | *Return*    | *Description*                          |
-        | :--------- | :------------------------------------ |
-        | uint256 | 수령 가능한 LPT 수 |
-        | uint256 | 반환될 first token 수량 |        
-        | uint256 | 반환될 second token 수량  |  
-
+   
     - - - 
     * **inqueryReceiptFromSwap**   
     교환 할 경우 수령 가능한 pair token의 수량과 수수료를 조회 한다
@@ -172,26 +126,6 @@ graph LR
         | :--------- | :------------------------------------ |
         | uint256 | 수령 할 token 수량|
         | uint256 | 교환 수수료 |        
-
-    - - - 
-    * **inqueryReceiptFromSwap**   
-    LPT를 amount 만큼 철회 할 경우 수령 가능한 자산을 조회 한다
-    ``` java
-        function inqueryAssetFromWithdrawal ( uint256 amount ) 
-                            public view returns( uint256, uint256 )
-    ```   
-        Parameters     
-
-        |  *Parameter*    | *Description*                          |
-        | :--------- | :------------------------------------ |
-        | java | LPT 수 |
-
-        Returns     
-
-        | *Return*    | *Description*                          |
-        | :--------- | :------------------------------------ |
-        | uint256 | first token 수량 |
-        | uint256 | second token 수량 |
 
     - - - 
     * **inqueryAssets**   
@@ -490,7 +424,8 @@ graph LR
                     , uint256 firstTradingVolume
                     , uint256 secondTradingVolume
                     , uint256 firstFee
-                    , uint256 secondFee );
+                    , uint256 secondFee
+                    , uint256 totalLPTSupply );
     ```  
 
         Parameters     
@@ -503,4 +438,5 @@ graph LR
         | firstTradingVolume   | first token 누적 거래량 |   
         | secondTradingVolume | second token 누적 거래량 |           
         | firstFee | first token 누적 수수료 |           
-        | secondFee | second token 누적 수수료 |           
+        | secondFee | second token 누적 수수료 |       
+        | totalLPTSupply | LPT totalSupply |         
